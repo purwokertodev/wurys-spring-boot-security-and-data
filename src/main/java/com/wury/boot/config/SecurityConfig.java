@@ -36,25 +36,25 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         httpSecurity.csrf().disable();
         httpSecurity.headers().frameOptions().disable();
 
-        httpSecurity.authorizeRequests().antMatchers("/css/**", "/js/**", "/images/**", "/resources/**", "/webjars/**").permitAll();
+        httpSecurity.authorizeRequests().antMatchers("/stylesheets/**", "/javascript/**", "/images/**", "/resources/**", "/webjars/**").permitAll();
 
         httpSecurity.authorizeRequests()
-                .antMatchers("/signin").anonymous()
+                .antMatchers("/", "/home", "/signin", "/registration").anonymous()
                 .anyRequest().authenticated()
                 .and()
                 .formLogin()
                 .loginPage("/signin")
-                .loginProcessingUrl("/login-process.htm")
+                .loginProcessingUrl("/login-process")
                 .failureUrl("/signin?error")
                 .usernameParameter("username")
                 .passwordParameter("password")
-                .defaultSuccessUrl("/admin/dashboard.htm", true)
+                .defaultSuccessUrl("/author/dashboard", true)
                 .and()
                 .logout()
                 .logoutSuccessUrl("/signin?logout");
 
-        httpSecurity.exceptionHandling().accessDeniedPage("/admin/dashboard.htm");
-        httpSecurity.sessionManagement().invalidSessionUrl("/signin");
+        httpSecurity.exceptionHandling().accessDeniedPage("/author/dashboard");
+        httpSecurity.sessionManagement().invalidSessionUrl("/");
     }
 
     @Override

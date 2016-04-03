@@ -15,10 +15,16 @@ public class IndexController {
 
     private final Logger logger = LoggerFactory.getLogger(IndexController.class);
 
-    @RequestMapping(value = "/", method = RequestMethod.GET)
+    @RequestMapping(value = "/home", method = RequestMethod.GET)
     public ModelAndView index(){
         ModelAndView mav = new ModelAndView("index");
         logger.warn("Logger inside IndexController");
+        return mav;
+    }
+
+    @RequestMapping(value = "/registration", method = RequestMethod.GET)
+    public ModelAndView registration(){
+        ModelAndView mav = new ModelAndView("registration");
         return mav;
     }
 }
