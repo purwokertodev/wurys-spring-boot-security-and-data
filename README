@@ -1,0 +1,6 @@
+spring boot, spring boot security, spring data, thymeleaf, Gradle, and postgresql
+
+command :
+
+- how to run this application : gradle bootRun
+- clean : gradle clean
