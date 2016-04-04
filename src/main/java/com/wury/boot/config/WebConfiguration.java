@@ -32,15 +32,14 @@ public class WebConfiguration extends WebMvcConfigurerAdapter {
         registry.addResourceHandler("/stylesheets/**").addResourceLocations("/stylesheets/");
         registry.addResourceHandler("/javascripts/**").addResourceLocations("/javascripts/");
         registry.addResourceHandler("/images/**").addResourceLocations("/images/");
-        registry.addResourceHandler("/webjars/**").addResourceLocations("classpath:/META-INF/resources/webjars/");
     }
 
     @Override
     public void addViewControllers(ViewControllerRegistry registry) {
         registry.addViewController("/").setViewName("index");
         registry.addViewController("/signin").setViewName("signin");
-        registry.addViewController("/error/404.htm").setViewName("error404");
-        registry.addViewController("/error/505.htm").setViewName("error505");
+        registry.addViewController("/error/error404").setViewName("error404");
+        registry.addViewController("/error/error505").setViewName("error505");
     }
 
     @Bean
@@ -48,8 +47,8 @@ public class WebConfiguration extends WebMvcConfigurerAdapter {
         return new EmbeddedServletContainerCustomizer() {
             @Override
             public void customize(ConfigurableEmbeddedServletContainer container) {
-                ErrorPage error404Page = new ErrorPage(HttpStatus.NOT_FOUND, "/error/404.htm");
-                ErrorPage error505Page = new ErrorPage(HttpStatus.INTERNAL_SERVER_ERROR, "/error/505.htm");
+                ErrorPage error404Page = new ErrorPage(HttpStatus.NOT_FOUND, "/error/error404");
+                ErrorPage error505Page = new ErrorPage(HttpStatus.INTERNAL_SERVER_ERROR, "/error/error505");
 
                 container.addErrorPages(error404Page, error505Page);
             }
