@@ -3,6 +3,7 @@ package com.wury.boot.repository.impl;
 import com.wury.boot.model.AbstractMyModel;
 import com.wury.boot.model.UserBlog;
 import com.wury.boot.repository.MyGenericRepository;
+import org.apache.log4j.Logger;
 import org.springframework.data.jpa.repository.support.JpaEntityInformation;
 import org.springframework.data.jpa.repository.support.SimpleJpaRepository;
 import org.springframework.data.repository.NoRepositoryBean;
@@ -17,6 +18,8 @@ import java.util.Date;
  */
 @NoRepositoryBean
 public class MyGenericRepositoryImpl<T extends AbstractMyModel, ID extends Serializable> extends SimpleJpaRepository<T, ID> implements MyGenericRepository<T, ID> {
+
+    static Logger logger = Logger.getLogger(MyGenericRepositoryImpl.class);
 
     protected Class<T> entity;
 

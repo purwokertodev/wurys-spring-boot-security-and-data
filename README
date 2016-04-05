@@ -4,3 +4,11 @@ command :
 
 - how to run this application : gradle bootRun
 - clean : gradle clean
+
+Database (Postgresql)
+
+ you can use PgAdmin, it will more easier to manage the database.
+ database source available in /src/main/resources/db_mig/.
+ - create database first, (blog_app_1) that is my database name on application.properties
+ - execute all database source.
+ - test the application
