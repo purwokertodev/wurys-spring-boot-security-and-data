@@ -1,5 +1,6 @@
 package com.wury.boot.config;
 
+import com.wury.boot.repository.impl.MyGenericRepositoryImpl;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.orm.jpa.EntityScan;
 import org.springframework.context.annotation.Configuration;
@@ -12,7 +13,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @Configuration
 @EnableAutoConfiguration
 @EntityScan(basePackages = {"com.wury.boot.model"})
-@EnableJpaRepositories(basePackages = {"com.wury.boot.repository"})
+@EnableJpaRepositories(basePackages = {"com.wury.boot.repository"}, repositoryBaseClass = MyGenericRepositoryImpl.class)
 @EnableTransactionManagement
 public class RepositoryConfig {
 

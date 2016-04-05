@@ -7,6 +7,7 @@ import java.util.Set;
 import com.wury.boot.model.UserBlog;
 import com.wury.boot.model.UserBlogRole;
 import com.wury.boot.repository.UserBlogRepository;
+import com.wury.boot.service.api.UserBlogService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
@@ -24,14 +25,14 @@ import org.springframework.transaction.annotation.Transactional;
 public class CustomUserDetailsService implements UserDetailsService {
 
     @Autowired
-    private UserBlogRepository userBlogRepository;
+    private UserBlogService userBlogService;
 
     @Transactional
     @Override
     public UserDetails loadUserByUsername(String username)
             throws UsernameNotFoundException {
 
-        UserBlog userBlog = userBlogRepository.findByEmail(username);
+        UserBlog userBlog = userBlogService.findOneByEmail(username);
         List<GrantedAuthority> authorities = buildUserAuthority(userBlog.getUserRoles());
 
         return buildUserForAuthentication(userBlog, authorities);
