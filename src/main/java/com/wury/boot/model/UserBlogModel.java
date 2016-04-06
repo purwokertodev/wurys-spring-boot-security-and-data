@@ -29,7 +29,7 @@ import java.util.Set;
  */
 @Entity
 @Table(name = "user_blog")
-public class UserBlog extends AbstractMyModel{
+public class UserBlogModel extends AbstractMyModel{
     
     @Column(name = "name", nullable = false)
     private String name;
@@ -47,7 +47,7 @@ public class UserBlog extends AbstractMyModel{
     private String pictureLocation;
 
     @OneToMany(mappedBy = "userBlog", cascade = {CascadeType.ALL}, fetch = FetchType.LAZY)
-    private Set<UserBlogRole> userRoles;
+    private Set<UserBlogRoleModel> userRoles;
 
     public String getName() {
         return name;
@@ -89,11 +89,11 @@ public class UserBlog extends AbstractMyModel{
         this.pictureLocation = pictureLocation;
     }
 
-    public Set<UserBlogRole> getUserRoles() {
+    public Set<UserBlogRoleModel> getUserRoles() {
         return userRoles;
     }
 
-    public void setUserRoles(Set<UserBlogRole> userRoles) {
+    public void setUserRoles(Set<UserBlogRoleModel> userRoles) {
         this.userRoles = userRoles;
     }
 }

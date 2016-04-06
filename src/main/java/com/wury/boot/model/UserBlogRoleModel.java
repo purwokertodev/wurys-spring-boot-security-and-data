@@ -7,14 +7,14 @@ import javax.persistence.*;
  */
 @Entity
 @Table(name = "user_blog_role")
-public class UserBlogRole extends AbstractMyModel {
+public class UserBlogRoleModel extends AbstractMyModel {
 
     @Column(name = "role_name", nullable = false, unique = true, length = 128)
     private String roleName;
 
     @ManyToOne
     @JoinColumn(name = "user_blog_id")
-    private UserBlog userBlog;
+    private UserBlogModel userBlogModel;
 
     public String getRoleName() {
         return roleName;
@@ -24,11 +24,11 @@ public class UserBlogRole extends AbstractMyModel {
         this.roleName = roleName;
     }
 
-    public UserBlog getUserBlog() {
-        return userBlog;
+    public UserBlogModel getUserBlogModel() {
+        return userBlogModel;
     }
 
-    public void setUserBlog(UserBlog userBlog) {
-        this.userBlog = userBlog;
+    public void setUserBlogModel(UserBlogModel userBlogModel) {
+        this.userBlogModel = userBlogModel;
     }
 }

@@ -4,9 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 
-import com.wury.boot.model.UserBlog;
-import com.wury.boot.model.UserBlogRole;
-import com.wury.boot.repository.UserBlogRepository;
+import com.wury.boot.model.UserBlogModel;
+import com.wury.boot.model.UserBlogRoleModel;
 import com.wury.boot.service.api.UserBlogService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
@@ -32,22 +31,22 @@ public class CustomUserDetailsService implements UserDetailsService {
     public UserDetails loadUserByUsername(String username)
             throws UsernameNotFoundException {
 
-        UserBlog userBlog = userBlogService.findOneByEmail(username);
-        List<GrantedAuthority> authorities = buildUserAuthority(userBlog.getUserRoles());
+        UserBlogModel userBlogModel = userBlogService.findOneByEmail(username);
+        List<GrantedAuthority> authorities = buildUserAuthority(userBlogModel.getUserRoles());
 
-        return buildUserForAuthentication(userBlog, authorities);
+        return buildUserForAuthentication(userBlogModel, authorities);
     }
 
-    private User buildUserForAuthentication(UserBlog userBlog, List<GrantedAuthority> authorities) {
+    private User buildUserForAuthentication(UserBlogModel userBlogModel, List<GrantedAuthority> authorities) {
 
-        return new User(userBlog.getEmail(), userBlog.getPassword(),
+        return new User(userBlogModel.getEmail(), userBlogModel.getPassword(),
                 true, true, true, true, authorities);
     }
 
-    private List<GrantedAuthority> buildUserAuthority(Set<UserBlogRole> userRoles) {
+    private List<GrantedAuthority> buildUserAuthority(Set<UserBlogRoleModel> userRoles) {
 
         List<GrantedAuthority> authorities = new ArrayList<GrantedAuthority>(0);
-        for (UserBlogRole userRole : userRoles) {
+        for (UserBlogRoleModel userRole : userRoles) {
             authorities.add(new SimpleGrantedAuthority(userRole.getRoleName()));
         }
 

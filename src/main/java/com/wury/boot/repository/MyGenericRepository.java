@@ -1,6 +1,7 @@
 package com.wury.boot.repository;
 
-import com.wury.boot.model.UserBlog;
+import com.wury.boot.model.UserBlogModel;
+import org.springframework.data.domain.Sort;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.repository.NoRepositoryBean;
 
@@ -25,16 +26,18 @@ public interface MyGenericRepository<T, ID extends Serializable> extends CrudRep
 
     <S extends T> S save(S model);
 
+    List<T> findAll(Sort orders);
+
 
     /**
      * My Custom method
      *
      */
-    T save(T model, UserBlog author);
+    T save(T model, UserBlogModel author);
 
     boolean isDeleted(T model);
 
-    Boolean delete(T model, UserBlog userBlog);
+    Boolean delete(T model, UserBlogModel userBlogModel);
 
     void remove(T model);
 

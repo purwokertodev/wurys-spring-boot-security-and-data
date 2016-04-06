@@ -320,3 +320,211 @@ Using default security password: 469794de-b94e-4205-833d-c394a819d11a
 10:49:28.316 [http-nio-8080-exec-2] INFO  org.thymeleaf.TemplateEngine - [THYMELEAF] TEMPLATE ENGINE INITIALIZED
 10:50:55.904 [http-nio-8080-exec-4] WARN  c.w.boot.controller.IndexController - Logger inside IndexController
 10:50:55.904 [http-nio-8080-exec-4] WARN  c.w.boot.controller.IndexController - Logger inside IndexController
+16:48:45.992 [main] INFO  com.wury.boot.MyBootApplication - Starting MyBootApplication on WURI-PC with PID 5888 (E:\JIMAT\spring-data-project\boot-security-wury\build\classes\main started by WURI in E:\JIMAT\spring-data-project\boot-security-wury)
+16:48:46.025 [main] INFO  com.wury.boot.MyBootApplication - No active profile set, falling back to default profiles: default
+16:48:47.575 [main] INFO  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6b53e23f: startup date [Tue Apr 05 16:48:47 ICT 2016]; root of context hierarchy
+16:48:48.605 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 5.2.4.Final
+16:48:54.448 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$c198e89c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+16:48:56.634 [main] INFO  o.s.b.c.e.t.TomcatEmbeddedServletContainer - Tomcat initialized with port(s): 8080 (http)
+16:48:56.755 [main] INFO  o.a.catalina.core.StandardService - Starting service Tomcat
+16:48:56.772 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.0.32
+16:48:57.616 [localhost-startStop-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+16:48:57.617 [localhost-startStop-1] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 10054 ms
+16:49:01.780 [localhost-startStop-1] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Building JPA container EntityManagerFactory for persistence unit 'default'
+16:49:02.089 [localhost-startStop-1] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+16:49:03.155 [localhost-startStop-1] INFO  org.hibernate.Version - HHH000412: Hibernate Core {4.3.11.Final}
+16:49:03.158 [localhost-startStop-1] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+16:49:03.162 [localhost-startStop-1] INFO  org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
+16:49:04.062 [localhost-startStop-1] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+16:49:07.355 [localhost-startStop-1] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+16:49:07.504 [localhost-startStop-1] INFO  o.h.e.j.internal.LobCreatorBuilder - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+16:49:09.486 [localhost-startStop-1] INFO  o.h.h.i.a.ASTQueryTranslatorFactory - HHH000397: Using ASTQueryTranslatorFactory
+16:49:15.336 [localhost-startStop-1] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@759a8224, org.springframework.security.web.context.SecurityContextPersistenceFilter@28e3f81, org.springframework.security.web.header.HeaderWriterFilter@74a9c810, org.springframework.security.web.authentication.logout.LogoutFilter@46d27a81, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@7c8d1c25, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2546708b, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2b2a347e, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@ce3a3a9, org.springframework.security.web.session.SessionManagementFilter@36d1f253, org.springframework.security.web.access.ExceptionTranslationFilter@559cf7d6, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1b061f91]
+16:49:15.639 [localhost-startStop-1] INFO  o.s.b.c.e.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+16:49:15.642 [localhost-startStop-1] INFO  o.s.b.c.e.DelegatingFilterProxyRegistrationBean - Mapping filter: 'springSecurityFilterChain' to: [/*]
+16:49:15.642 [localhost-startStop-1] INFO  o.s.b.c.e.FilterRegistrationBean - Mapping filter: 'filterChainProxy' to: [/*]
+16:49:15.642 [localhost-startStop-1] INFO  o.s.b.c.e.ServletRegistrationBean - Mapping servlet: 'webServlet' to [/console/*]
+16:49:15.646 [localhost-startStop-1] INFO  o.s.b.c.e.ServletRegistrationBean - Mapping servlet: 'dispatcherServlet' to [/]
+16:49:17.073 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/author/dashboard]}" onto public org.springframework.web.servlet.ModelAndView com.wury.boot.controller.DashboardController.dashboard()
+16:49:17.076 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/home],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.wury.boot.controller.IndexController.index()
+16:49:17.076 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/registration],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.wury.boot.controller.IndexController.registration()
+16:49:17.087 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+16:49:17.090 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+16:49:17.132 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Root mapping to handler of type [class org.springframework.web.servlet.mvc.ParameterizableViewController]
+16:49:17.133 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/signin] onto handler of type [class org.springframework.web.servlet.mvc.ParameterizableViewController]
+16:49:17.133 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/error/error404] onto handler of type [class org.springframework.web.servlet.mvc.ParameterizableViewController]
+16:49:17.133 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/error/error505] onto handler of type [class org.springframework.web.servlet.mvc.ParameterizableViewController]
+16:49:17.168 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/resources/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+16:49:17.168 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/stylesheets/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+16:49:17.168 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/javascripts/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+16:49:17.171 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/images/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+16:49:17.199 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler]
+16:49:17.336 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6b53e23f: startup date [Tue Apr 05 16:48:47 ICT 2016]; root of context hierarchy
+16:49:18.200 [main] INFO  o.s.b.a.s.AuthenticationManagerConfiguration - 
+
+Using default security password: 42847497-cdc7-49b5-8387-34dc22240320
+
+16:49:18.416 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+16:49:18.564 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+16:49:18.600 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+16:49:18.621 [main] ERROR o.a.coyote.http11.Http11NioProtocol - Failed to start end point associated with ProtocolHandler ["http-nio-8080"]
+java.net.BindException: Address already in use: bind
+	at sun.nio.ch.Net.bind0(Native Method)
+	at sun.nio.ch.Net.bind(Net.java:433)
+	at sun.nio.ch.Net.bind(Net.java:425)
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:223)
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74)
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:340)
+	at org.apache.tomcat.util.net.AbstractEndpoint.start(AbstractEndpoint.java:765)
+	at org.apache.coyote.AbstractProtocol.start(AbstractProtocol.java:473)
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:986)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:147)
+	at org.apache.catalina.core.StandardService.addConnector(StandardService.java:239)
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.addPreviouslyRemovedConnectors(TomcatEmbeddedServletContainer.java:194)
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.start(TomcatEmbeddedServletContainer.java:151)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.startEmbeddedServletContainer(EmbeddedWebApplicationContext.java:293)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.finishRefresh(EmbeddedWebApplicationContext.java:141)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:541)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:118)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:766)
+	at org.springframework.boot.SpringApplication.createAndRefreshContext(SpringApplication.java:361)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1191)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1180)
+	at com.wury.boot.MyBootApplication.main(MyBootApplication.java:15)
+16:49:18.623 [main] ERROR o.a.catalina.core.StandardService - Failed to start connector [Connector[HTTP/1.1-8080]]
+org.apache.catalina.LifecycleException: Failed to start component [Connector[HTTP/1.1-8080]]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:153)
+	at org.apache.catalina.core.StandardService.addConnector(StandardService.java:239)
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.addPreviouslyRemovedConnectors(TomcatEmbeddedServletContainer.java:194)
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.start(TomcatEmbeddedServletContainer.java:151)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.startEmbeddedServletContainer(EmbeddedWebApplicationContext.java:293)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.finishRefresh(EmbeddedWebApplicationContext.java:141)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:541)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:118)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:766)
+	at org.springframework.boot.SpringApplication.createAndRefreshContext(SpringApplication.java:361)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1191)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1180)
+	at com.wury.boot.MyBootApplication.main(MyBootApplication.java:15)
+Caused by: org.apache.catalina.LifecycleException: service.getName(): "Tomcat";  Protocol handler start failed
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:993)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:147)
+	... 13 common frames omitted
+Caused by: java.net.BindException: Address already in use: bind
+	at sun.nio.ch.Net.bind0(Native Method)
+	at sun.nio.ch.Net.bind(Net.java:433)
+	at sun.nio.ch.Net.bind(Net.java:425)
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:223)
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74)
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:340)
+	at org.apache.tomcat.util.net.AbstractEndpoint.start(AbstractEndpoint.java:765)
+	at org.apache.coyote.AbstractProtocol.start(AbstractProtocol.java:473)
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:986)
+	... 14 common frames omitted
+16:49:18.654 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-8080"]
+16:49:18.655 [main] INFO  o.a.catalina.core.StandardService - Stopping service Tomcat
+16:49:18.744 [main] INFO  o.apache.catalina.util.LifecycleBase - The stop() method was called on component [StandardServer[-1]] after stop() had already been called. The second call will be ignored.
+16:49:18.745 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"]
+16:49:18.746 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Destroying ProtocolHandler ["http-nio-8080"]
+16:49:18.748 [main] ERROR o.s.boot.SpringApplication - Application startup failed
+org.springframework.boot.context.embedded.EmbeddedServletContainerException: Unable to start embedded Tomcat servlet container
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.start(TomcatEmbeddedServletContainer.java:165)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.startEmbeddedServletContainer(EmbeddedWebApplicationContext.java:293)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.finishRefresh(EmbeddedWebApplicationContext.java:141)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:541)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:118)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:766)
+	at org.springframework.boot.SpringApplication.createAndRefreshContext(SpringApplication.java:361)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1191)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1180)
+	at com.wury.boot.MyBootApplication.main(MyBootApplication.java:15)
+Caused by: java.lang.IllegalStateException: Tomcat connector in failed state
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.start(TomcatEmbeddedServletContainer.java:159)
+	... 10 common frames omitted
+16:49:18.753 [main] INFO  o.s.b.l.ClasspathLoggingApplicationListener - Application failed to start with classpath: [file:/E:/JIMAT/spring-data-project/boot-security-wury/build/classes/main/, file:/E:/JIMAT/spring-data-project/boot-security-wury/build/resources/main/, file:/C:/Users/WURI/.gradle/caches/modules-2/files-2.1/org.thymeleaf.extras/thymeleaf-extras-springsecurity3/2.1.1.RELEASE/da0d116c514849d3cbe650f2d124767eb19783b9/thymeleaf-extras-springsecurity3-2.1.1.RELEASE.jar, file:/C:/Users/WURI/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter-thymeleaf/1.3.3.RELEASE/b0a60f06e35a9df11d8fc34b5a1f31eee9dbdc6/spring-boot-starter-thymeleaf-1.3.3.RELEASE.jar, file:/C:/Users/WURI/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter-data-jpa/1.3.3.RELEASE/c1f8f3102650e54259d69c519b45b64fbf5cd25b/spring-boot-starter-data-jpa-1.3.3.RELEASE.jar, file:/C:/Users/WURI/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter-security/1.3.3.RELEASE/bb649df7b53ab5dc09780d63067400a240e3f366/spring-boot-starter-security-1.3.3.RELEASE.jar, file:/C:/Users/WURI/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter-web/1.3.3.RELEASE/f1ee2657f50844d8682b30a1f40aebff3ad60cce/spring-boot-starter-web-1.3.3.RELEASE.jar, file:/C:/Users/WURI/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter-tomcat/1.3.3.RELEASE/541468d85cc2c94d2b538b0fa07c018847bb9b78/spring-boot-starter-tomcat-1.3.3.RELEASE.jar, file:/C:/Users/WURI/.gradle/caches/modules-2/files-2.1/com.h2database/h2/1.4.191/dec3540178ea889b2871b0ed56db14bbec9cfdfc/h2-1.4.191.jar, file:/C:/Users/WURI/.gradle/caches/modules-2/files-2.1/postgresql/postgresql/9.1-901.jdbc4/153f2f92a786f12fc111d0111f709012df87c808/postgresql-9.1-901.jdbc4.jar, file:/C:/Users/WURI/.gradle/caches/modules-2/files-2.1/org.webjars/jquery/2.1.4/444c76e4ff085cac934a668ea52b9e29a40e45e6/jquery-2.1.4.jar, file:/C:/Users/WURI/.gradle/caches/modules-2/files-2.1/org.thymeleaf/thymeleaf/2.1.4.RELEASE/a730d892f3c57ba3d24af2ca657b42d81398a85a/thymeleaf-2.1.4.RELEASE.jar, file:/C:/Users/WURI/.gradle/caches/modules-2/files-2.1/org.slf4j/slf4j-api/1.7.16/3a6274f658487d5bfff9af3862beff6da1e7fd52/slf4j-api-1.7.16.jar, file:/C:/Users/WURI/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter/1.3.3.RELEASE/e4a71ce6ae8e42a7535dd9f1a39f91d36c538f28/spring-boot-starter-1.3.3.RELEASE.jar, file:/C:/Users/WURI/.gradle/caches/modules-2/files-2.1/org.thymeleaf/thymeleaf-spring4/2.1.4.RELEASE/e5677e7daedfd05e001945abf4295305ac23826b/thymeleaf-spring4-2.1.4.RELEASE.jar, file:/C:/Users/WURI/.gradle/caches/modules-2/files-2.1/nz.net.ultraq.thymeleaf/thymeleaf-layout-dialect/1.3.3/a58f248ee7c556265c49df466a6071956389c9ab/thymeleaf-layout-dialect-1.3.3.jar, file:/C:/Users/WURI/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter-aop/1.3.3.RELEASE/f80c290f6a3dccb8255a594795a20048c63460da/spring-boot-starter-aop-1.3.3.RELEASE.jar, file:/C:/Users/WURI/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter-jdbc/1.3.3.RELEASE/f10ffeca4c879f1f66f30989cc0f133258934246/spring-boot-starter-jdbc-1.3.3.RELEASE.jar, file:/C:/Users/WURI/.gradle/caches/modules-2/files-2.1/org.hibernate/hibernate-entitymanager/4.3.11.Final/27a119fcc2b91c50e5285dd11158fac2c38c9d1b/hibernate-entitymanager-4.3.11.Final.jar, file:/C:/Users/WURI/.gradle/caches/modules-2/files-2.1/javax.transaction/javax.transaction-api/1.2/d81aff979d603edd90dcd8db2abc1f4ce6479e3e/javax.transaction-api-1.2.jar, file:/C:/Users/WURI/.gradle/caches/modules-2/files-2.1/org.springframework.data/spring-data-jpa/1.9.4.RELEASE/80b83510e67aa085b7d91d2d096d90133ec995de/spring-data-jpa-1.9.4.RELEASE.jar, file:/C:/Users/WURI/.gradle/caches/modules-2/files-2.1/org.springframework/spring-aspects/4.2.5.RELEASE/ed09517441a276db2a7e0e7b60a390c52b8093af/spring-aspects-4.2.5.RELEASE.jar, file:/C:/Users/WURI/.gradle/caches/modules-2/files-2.1/org.springframework/spring-aop/4.2.5.RELEASE/858d6c70909b3ce7e07b59fc936f8ccfcd81c0aa/spring-aop-4.2.5.RELEASE.jar, file:/C:/Users/WURI/.gradle/caches/modules-2/files-2.1/org.springframework.security/spring-security-config/4.0.3.RELEASE/31c0a4d0159f1b668d9512f57fb46aac29949b08/spring-security-config-4.0.3.RELEASE.jar, file:/C:/Users/WURI/.gradle/caches/modules-2/files-2.1/org.springframework.security/spring-security-web/4.0.3.RELEASE/5f0233d94ca53ac8710780b43791f633f970480a/spring-security-web-4.0.3.RELEASE.jar, file:/C:/Users/WURI/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter-validation/1.3.3.RELEASE/df2d5a437fa3093b8da99216c355189fe7b5e64/spring-boot-starter-validation-1.3.3.RELEASE.jar, file:/C:/Users/WURI/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-databind/2.6.5/d50be1723a09befd903887099ff2014ea9020333/jackson-databind-2.6.5.jar, file:/C:/Users/WURI/.gradle/caches/modules-2/files-2.1/org.springframework/spring-web/4.2.5.RELEASE/49cd2430884b77172aa81e3fc33ef668ea1dab30/spring-web-4.2.5.RELEASE.jar, file:/C:/Users/WURI/.gradle/caches/modules-2/files-2.1/org.springframework/spring-webmvc/4.2.5.RELEASE/cf463cce3e4453eb4b9a69de2dcdfd60c3c57e0/spring-webmvc-4.2.5.RELEASE.jar, file:/C:/Users/WURI/.gradle/caches/modules-2/files-2.1/org.apache.tomcat.embed/tomcat-embed-core/8.0.32/734ead0c803525cc9c7f283438101734ca9aac01/tomcat-embed-core-8.0.32.jar, file:/C:/Users/WURI/.gradle/caches/modules-2/files-2.1/org.apache.tomcat.embed/tomcat-embed-el/8.0.32/82adf8bd959fc046d55490e6f2ce67297c91d62b/tomcat-embed-el-8.0.32.jar, file:/C:/Users/WURI/.gradle/caches/modules-2/files-2.1/org.apache.tomcat.embed/tomcat-embed-logging-juli/8.0.32/5e664b357710a6c43cad2191404c2a9d0b82cdb3/tomcat-embed-logging-juli-8.0.32.jar, file:/C:/Users/WURI/.gradle/caches/modules-2/files-2.1/org.apache.tomcat.embed/tomcat-embed-websocket/8.0.32/237ca58dac66f438579750169e6cb297ac041c9d/tomcat-embed-websocket-8.0.32.jar, file:/C:/Users/WURI/.gradle/caches/modules-2/files-2.1/ognl/ognl/3.0.8/37e1aebfde7eb7baebc9ad4f85116ef9009c5fc5/ognl-3.0.8.jar, file:/C:/Users/WURI/.gradle/caches/modules-2/files-2.1/org.javassist/javassist/3.18.1-GA/d9a09f7732226af26bf99f19e2cffe0ae219db5b/javassist-3.18.1-GA.jar, file:/C:/Users/WURI/.gradle/caches/modules-2/files-2.1/org.unbescape/unbescape/1.1.0.RELEASE/ab0db4fe0a6fa89fb8da2a40008a4e63a7f3f5b9/unbescape-1.1.0.RELEASE.jar, file:/C:/Users/WURI/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot/1.3.3.RELEASE/641cc375499d444e4efbc1801902260daa79758d/spring-boot-1.3.3.RELEASE.jar, file:/C:/Users/WURI/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-autoconfigure/1.3.3.RELEASE/e7a4a25f74dac6b335ffabc43e3e8a6e3066340e/spring-boot-autoconfigure-1.3.3.RELEASE.jar, file:/C:/Users/WURI/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter-logging/1.3.3.RELEASE/16b395c84f28b947f1c336aa461fda1e662bb3b6/spring-boot-starter-logging-1.3.3.RELEASE.jar, file:/C:/Users/WURI/.gradle/caches/modules-2/files-2.1/org.springframework/spring-core/4.2.5.RELEASE/251207b29f0f38f61e3495a2f7fb053cf1bfe8c/spring-core-4.2.5.RELEASE.jar, file:/C:/Users/WURI/.gradle/caches/modules-2/files-2.1/org.yaml/snakeyaml/1.16/d64fb662c9e42789149f5078a62a22edda786c6a/snakeyaml-1.16.jar, file:/C:/Users/WURI/.gradle/caches/modules-2/files-2.1/org.codehaus.groovy/groovy/2.4.6/844cb06c553a5e6a736f44aa2b67d25bf6a34fde/groovy-2.4.6.jar, file:/C:/Users/WURI/.gradle/caches/modules-2/files-2.1/org.aspectj/aspectjweaver/1.8.8/969c8d3d3d56db1e1c8721a03ef07d0c9ac3a2e4/aspectjweaver-1.8.8.jar, file:/C:/Users/WURI/.gradle/caches/modules-2/files-2.1/org.apache.tomcat/tomcat-jdbc/8.0.32/55396c45fc8c34f31420a3b280fde4b1387b044d/tomcat-jdbc-8.0.32.jar, file:/C:/Users/WURI/.gradle/caches/modules-2/files-2.1/org.springframework/spring-jdbc/4.2.5.RELEASE/205d2f1b902eac16a2ece772dc5ac6090b7e0b6f/spring-jdbc-4.2.5.RELEASE.jar, file:/C:/Users/WURI/.gradle/caches/modules-2/files-2.1/org.jboss.logging/jboss-logging/3.3.0.Final/3616bb87707910296e2c195dc016287080bba5af/jboss-logging-3.3.0.Final.jar, file:/C:/Users/WURI/.gradle/caches/modules-2/files-2.1/org.jboss.logging/jboss-logging-annotations/1.2.0.Beta1/2f437f37bb265d9f8f1392823dbca12d2bec06d6/jboss-logging-annotations-1.2.0.Beta1.jar, file:/C:/Users/WURI/.gradle/caches/modules-2/files-2.1/org.hibernate/hibernate-core/4.3.11.Final/536ac0021240d97db99c7d2983067cef1a6f3af5/hibernate-core-4.3.11.Final.jar, file:/C:/Users/WURI/.gradle/caches/modules-2/files-2.1/dom4j/dom4j/1.6.1/5d3ccc056b6f056dbf0dddfdf43894b9065a8f94/dom4j-1.6.1.jar, file:/C:/Users/WURI/.gradle/caches/modules-2/files-2.1/org.hibernate.common/hibernate-commons-annotations/4.0.5.Final/2a581b9edb8168e45060d8bad8b7f46712d2c52c/hibernate-commons-annotations-4.0.5.Final.jar, file:/C:/Users/WURI/.gradle/caches/modules-2/files-2.1/org.hibernate.javax.persistence/hibernate-jpa-2.1-api/1.0.0.Final/5e731d961297e5a07290bfaf3db1fbc8bbbf405a/hibernate-jpa-2.1-api-1.0.0.Final.jar, file:/C:/Users/WURI/.gradle/caches/modules-2/files-2.1/org.springframework.data/spring-data-commons/1.11.4.RELEASE/c2b1fd4dbf7dff772d6124bb35892759e8bf088e/spring-data-commons-1.11.4.RELEASE.jar, file:/C:/Users/WURI/.gradle/caches/modules-2/files-2.1/org.springframework/spring-orm/4.2.5.RELEASE/60625981b837ba93e603d3068d69c6397ecb3ad2/spring-orm-4.2.5.RELEASE.jar, file:/C:/Users/WURI/.gradle/caches/modules-2/files-2.1/org.springframework/spring-context/4.2.5.RELEASE/a75e18322c7b362fe1daa26a245ae672ec0f3138/spring-context-4.2.5.RELEASE.jar, file:/C:/Users/WURI/.gradle/caches/modules-2/files-2.1/org.springframework/spring-tx/4.2.5.RELEASE/7395321fe937272d9b781a13985e04ab2dcd6210/spring-tx-4.2.5.RELEASE.jar, file:/C:/Users/WURI/.gradle/caches/modules-2/files-2.1/org.springframework/spring-beans/4.2.5.RELEASE/fa992ae40f6fc47117282164e0433b71da385e94/spring-beans-4.2.5.RELEASE.jar, file:/C:/Users/WURI/.gradle/caches/modules-2/files-2.1/org.slf4j/jcl-over-slf4j/1.7.16/34e48073884704ac987d3d1a1ab9b60e62028a9/jcl-over-slf4j-1.7.16.jar, file:/C:/Users/WURI/.gradle/caches/modules-2/files-2.1/aopalliance/aopalliance/1.0/235ba8b489512805ac13a8f9ea77a1ca5ebe3e8/aopalliance-1.0.jar, file:/C:/Users/WURI/.gradle/caches/modules-2/files-2.1/org.springframework.security/spring-security-core/4.0.3.RELEASE/9f420c5742ad063970c5d33f60680a1cee777aa5/spring-security-core-4.0.3.RELEASE.jar, file:/C:/Users/WURI/.gradle/caches/modules-2/files-2.1/org.springframework/spring-expression/4.2.5.RELEASE/a42bdfb833d0be6c18429aea3fb0fba81f85c6e8/spring-expression-4.2.5.RELEASE.jar, file:/C:/Users/WURI/.gradle/caches/modules-2/files-2.1/org.hibernate/hibernate-validator/5.2.4.Final/fb18766b576aa6632bcfe9a20a023cbd52bf9769/hibernate-validator-5.2.4.Final.jar, file:/C:/Users/WURI/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-annotations/2.6.5/65137ebf85056473b40c311f889601646a7612ba/jackson-annotations-2.6.5.jar, file:/C:/Users/WURI/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-core/2.6.5/334369d7eff497f358b248c171dac0dd62c68f67/jackson-core-2.6.5.jar, file:/C:/Users/WURI/.gradle/caches/modules-2/files-2.1/ch.qos.logback/logback-classic/1.1.5/92353eb144695bba80b31f7bec4f36d871f230ac/logback-classic-1.1.5.jar, file:/C:/Users/WURI/.gradle/caches/modules-2/files-2.1/org.slf4j/jul-to-slf4j/1.7.16/2d5b546c5557dcbf08c3a381d7dc9bd275a602c1/jul-to-slf4j-1.7.16.jar, file:/C:/Users/WURI/.gradle/caches/modules-2/files-2.1/org.slf4j/log4j-over-slf4j/1.7.16/c5922f37c8a5e4377cfb543c549f10e73d72ede0/log4j-over-slf4j-1.7.16.jar, file:/C:/Users/WURI/.gradle/caches/modules-2/files-2.1/org.apache.tomcat/tomcat-juli/8.0.32/71471069cea029dfdce0735337864c7d0a3d9992/tomcat-juli-8.0.32.jar, file:/C:/Users/WURI/.gradle/caches/modules-2/files-2.1/antlr/antlr/2.7.7/83cd2cd674a217ade95a4bb83a8a14f351f48bd0/antlr-2.7.7.jar, file:/C:/Users/WURI/.gradle/caches/modules-2/files-2.1/org.jboss/jandex/1.1.0.Final/e84a2122e76f0b6503be78094ddf2108057ac15f/jandex-1.1.0.Final.jar, file:/C:/Users/WURI/.gradle/caches/modules-2/files-2.1/xml-apis/xml-apis/1.0.b2/3136ca936f64c9d68529f048c2618bd356bf85c9/xml-apis-1.0.b2.jar, file:/C:/Users/WURI/.gradle/caches/modules-2/files-2.1/javax.validation/validation-api/1.1.0.Final/8613ae82954779d518631e05daa73a6a954817d5/validation-api-1.1.0.Final.jar, file:/C:/Users/WURI/.gradle/caches/modules-2/files-2.1/com.fasterxml/classmate/1.1.0/dbbd699a1486ad0f2ed6f5af6cfed66acacb9056/classmate-1.1.0.jar, file:/C:/Users/WURI/.gradle/caches/modules-2/files-2.1/ch.qos.logback/logback-core/1.1.5/16722afde74444716e299bee1f60aec9f6d1f0dc/logback-core-1.1.5.jar]
+16:50:01.052 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 5.2.4.Final
+16:50:01.155 [main] INFO  com.wury.boot.MyBootApplication - Starting MyBootApplication on WURI-PC with PID 7680 (E:\JIMAT\spring-data-project\boot-security-wury\build\classes\main started by WURI in E:\JIMAT\spring-data-project\boot-security-wury)
+16:50:01.156 [main] INFO  com.wury.boot.MyBootApplication - No active profile set, falling back to default profiles: default
+16:50:01.642 [main] INFO  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6b53e23f: startup date [Tue Apr 05 16:50:01 ICT 2016]; root of context hierarchy
+16:50:06.130 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$b903df2b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+16:50:07.295 [main] INFO  o.s.b.c.e.t.TomcatEmbeddedServletContainer - Tomcat initialized with port(s): 8080 (http)
+16:50:07.330 [main] INFO  o.a.catalina.core.StandardService - Starting service Tomcat
+16:50:07.332 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.0.32
+16:50:07.746 [localhost-startStop-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+16:50:07.747 [localhost-startStop-1] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 6110 ms
+16:50:10.332 [localhost-startStop-1] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Building JPA container EntityManagerFactory for persistence unit 'default'
+16:50:10.371 [localhost-startStop-1] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+16:50:10.531 [localhost-startStop-1] INFO  org.hibernate.Version - HHH000412: Hibernate Core {4.3.11.Final}
+16:50:10.537 [localhost-startStop-1] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+16:50:10.539 [localhost-startStop-1] INFO  org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
+16:50:11.001 [localhost-startStop-1] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+16:50:12.599 [localhost-startStop-1] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+16:50:12.632 [localhost-startStop-1] INFO  o.h.e.j.internal.LobCreatorBuilder - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+16:50:12.957 [localhost-startStop-1] INFO  o.h.h.i.a.ASTQueryTranslatorFactory - HHH000397: Using ASTQueryTranslatorFactory
+16:50:14.836 [localhost-startStop-1] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@291fc922, org.springframework.security.web.context.SecurityContextPersistenceFilter@ddd8e20, org.springframework.security.web.header.HeaderWriterFilter@30434d9c, org.springframework.security.web.authentication.logout.LogoutFilter@34486996, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@7a4b9598, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@b7e2510, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6e57e68d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@623a3cf0, org.springframework.security.web.session.SessionManagementFilter@31948f43, org.springframework.security.web.access.ExceptionTranslationFilter@713144e3, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@5bf4f1d0]
+16:50:15.098 [localhost-startStop-1] INFO  o.s.b.c.e.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+16:50:15.102 [localhost-startStop-1] INFO  o.s.b.c.e.DelegatingFilterProxyRegistrationBean - Mapping filter: 'springSecurityFilterChain' to: [/*]
+16:50:15.103 [localhost-startStop-1] INFO  o.s.b.c.e.FilterRegistrationBean - Mapping filter: 'filterChainProxy' to: [/*]
+16:50:15.103 [localhost-startStop-1] INFO  o.s.b.c.e.ServletRegistrationBean - Mapping servlet: 'webServlet' to [/console/*]
+16:50:15.105 [localhost-startStop-1] INFO  o.s.b.c.e.ServletRegistrationBean - Mapping servlet: 'dispatcherServlet' to [/]
+16:50:16.396 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/author/dashboard]}" onto public org.springframework.web.servlet.ModelAndView com.wury.boot.controller.DashboardController.dashboard()
+16:50:16.404 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/home],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.wury.boot.controller.IndexController.index()
+16:50:16.404 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/registration],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.wury.boot.controller.IndexController.registration()
+16:50:16.412 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+16:50:16.413 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+16:50:16.446 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Root mapping to handler of type [class org.springframework.web.servlet.mvc.ParameterizableViewController]
+16:50:16.446 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/signin] onto handler of type [class org.springframework.web.servlet.mvc.ParameterizableViewController]
+16:50:16.446 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/error/error404] onto handler of type [class org.springframework.web.servlet.mvc.ParameterizableViewController]
+16:50:16.447 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/error/error505] onto handler of type [class org.springframework.web.servlet.mvc.ParameterizableViewController]
+16:50:16.467 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/resources/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+16:50:16.467 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/stylesheets/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+16:50:16.467 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/javascripts/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+16:50:16.468 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/images/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+16:50:16.475 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler]
+16:50:16.580 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6b53e23f: startup date [Tue Apr 05 16:50:01 ICT 2016]; root of context hierarchy
+16:50:17.374 [main] INFO  o.s.b.a.s.AuthenticationManagerConfiguration - 
+
+Using default security password: 920d59a4-382d-4233-b0b8-732c9c64f99f
+
+16:50:17.634 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+16:50:17.707 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+16:50:17.725 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+16:50:17.783 [main] INFO  o.a.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+16:50:17.883 [main] INFO  o.s.b.c.e.t.TomcatEmbeddedServletContainer - Tomcat started on port(s): 8080 (http)
+16:50:17.895 [main] INFO  com.wury.boot.MyBootApplication - Started MyBootApplication in 18.208 seconds (JVM running for 19.461)
+16:50:21.179 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+16:50:21.179 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started
+16:50:21.292 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 113 ms
+16:50:21.650 [http-nio-8080-exec-1] INFO  org.thymeleaf.TemplateEngine - [THYMELEAF] INITIALIZING TEMPLATE ENGINE
+16:50:22.041 [http-nio-8080-exec-1] INFO  o.t.t.AbstractTemplateResolver - [THYMELEAF] INITIALIZING TEMPLATE RESOLVER: org.thymeleaf.templateresolver.ServletContextTemplateResolver
+16:50:22.042 [http-nio-8080-exec-1] INFO  o.t.t.AbstractTemplateResolver - [THYMELEAF] TEMPLATE RESOLVER INITIALIZED OK
+16:50:22.042 [http-nio-8080-exec-1] INFO  o.t.m.AbstractMessageResolver - [THYMELEAF] INITIALIZING MESSAGE RESOLVER: org.thymeleaf.spring4.messageresolver.SpringMessageResolver
+16:50:22.042 [http-nio-8080-exec-1] INFO  o.t.m.AbstractMessageResolver - [THYMELEAF] MESSAGE RESOLVER INITIALIZED OK
+16:50:22.049 [http-nio-8080-exec-1] INFO  org.thymeleaf.TemplateEngine.CONFIG - [THYMELEAF] TEMPLATE ENGINE CONFIGURATION:
+[THYMELEAF] * Cache Factory implementation: org.thymeleaf.cache.StandardCacheManager
+[THYMELEAF] * Template modes:
+[THYMELEAF]     * XHTML
+[THYMELEAF]     * HTML5
+[THYMELEAF]     * VALIDXML
+[THYMELEAF]     * LEGACYHTML5
+[THYMELEAF]     * VALIDXHTML
+[THYMELEAF]     * XML
+[THYMELEAF] * Template resolvers (in order):
+[THYMELEAF]     * org.thymeleaf.templateresolver.ServletContextTemplateResolver
+[THYMELEAF] * Message resolvers (in order):
+[THYMELEAF]     * org.thymeleaf.spring4.messageresolver.SpringMessageResolver
+[THYMELEAF] * Dialect [1 of 3]: org.thymeleaf.spring4.dialect.SpringStandardDialect
+[THYMELEAF]     * Prefix: "th"
+[THYMELEAF] * Dialect [2 of 3]: nz.net.ultraq.thymeleaf.LayoutDialect
+[THYMELEAF]     * Prefix: "layout"
+[THYMELEAF] * Dialect [3 of 3]: org.thymeleaf.extras.springsecurity3.dialect.SpringSecurityDialect
+[THYMELEAF]     * Prefix: "sec"
+[THYMELEAF] TEMPLATE ENGINE CONFIGURED OK
+16:50:22.049 [http-nio-8080-exec-1] INFO  org.thymeleaf.TemplateEngine - [THYMELEAF] TEMPLATE ENGINE INITIALIZED

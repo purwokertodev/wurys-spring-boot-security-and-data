@@ -1,9 +1,10 @@
 package com.wury.boot.repository.impl;
 
 import com.wury.boot.model.AbstractMyModel;
-import com.wury.boot.model.UserBlog;
+import com.wury.boot.model.UserBlogModel;
 import com.wury.boot.repository.MyGenericRepository;
 import org.apache.log4j.Logger;
+import org.springframework.data.domain.Sort;
 import org.springframework.data.jpa.repository.support.JpaEntityInformation;
 import org.springframework.data.jpa.repository.support.SimpleJpaRepository;
 import org.springframework.data.repository.NoRepositoryBean;
@@ -12,6 +13,7 @@ import org.springframework.transaction.annotation.Transactional;
 import javax.persistence.EntityManager;
 import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
 
 /**
  * Created by WURI on 04/04/2016.
@@ -47,7 +49,7 @@ public class MyGenericRepositoryImpl<T extends AbstractMyModel, ID extends Seria
 
     @Override
     @Transactional
-    public T save(T model, UserBlog author) {
+    public T save(T model, UserBlogModel author) {
         if(this.entityInformation.isNew(model)){
             model.setCreatedById(author.getId());
             model.setCreatedAt(new Date());
@@ -69,8 +71,8 @@ public class MyGenericRepositoryImpl<T extends AbstractMyModel, ID extends Seria
 
     @Override
     @Transactional
-    public Boolean delete(T model, UserBlog userBlog) {
-        model.setDeletedById(userBlog.getId());
+    public Boolean delete(T model, UserBlogModel userBlogModel) {
+        model.setDeletedById(userBlogModel.getId());
         model.setDeletedAt(new Date());
         this.save(model);
         return true;
@@ -79,5 +81,10 @@ public class MyGenericRepositoryImpl<T extends AbstractMyModel, ID extends Seria
     @Override
     public void remove(T model) {
         super.delete(model);
+    }
+
+    @Override
+    public List<T> findAll(Sort sort) {
+        return super.findAll(sort);
     }
 }
