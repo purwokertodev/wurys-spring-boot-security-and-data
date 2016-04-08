@@ -1,6 +1,8 @@
 package com.wury.boot.repository;
 
 import com.wury.boot.model.UserBlogModel;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.repository.NoRepositoryBean;
@@ -27,6 +29,8 @@ public interface MyGenericRepository<T, ID extends Serializable> extends CrudRep
     <S extends T> S save(S model);
 
     List<T> findAll(Sort orders);
+
+    Page<T> findAll(Pageable pageable);
 
 
     /**

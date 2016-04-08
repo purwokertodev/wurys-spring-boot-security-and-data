@@ -4,6 +4,8 @@ import com.wury.boot.model.AbstractMyModel;
 import com.wury.boot.model.UserBlogModel;
 import com.wury.boot.repository.MyGenericRepository;
 import org.apache.log4j.Logger;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.jpa.repository.support.JpaEntityInformation;
 import org.springframework.data.jpa.repository.support.SimpleJpaRepository;
@@ -86,5 +88,10 @@ public class MyGenericRepositoryImpl<T extends AbstractMyModel, ID extends Seria
     @Override
     public List<T> findAll(Sort sort) {
         return super.findAll(sort);
+    }
+
+    @Override
+    public Page<T> findAll(Pageable pageable) {
+        return super.findAll(pageable);
     }
 }
