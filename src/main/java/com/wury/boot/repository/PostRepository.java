@@ -10,8 +10,8 @@ import java.util.UUID;
 /**
  * Created by WURI on 06/04/2016.
  */
-public interface PostRepostory extends MyGenericRepository<PostModel, UUID> {
+public interface PostRepository extends MyGenericRepository<PostModel, UUID> {
 
     Page<PostModel> findByUserBlogModel(UserBlogModel author, Pageable pageable);
-    
+
 }

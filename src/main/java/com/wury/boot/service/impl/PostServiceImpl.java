@@ -2,7 +2,7 @@ package com.wury.boot.service.impl;
 
 import com.wury.boot.model.PostModel;
 import com.wury.boot.model.UserBlogModel;
-import com.wury.boot.repository.PostRepostory;
+import com.wury.boot.repository.PostRepository;
 import com.wury.boot.service.api.PostService;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,7 +26,7 @@ public class PostServiceImpl implements PostService {
     private static final Logger LOGGER = Logger.getLogger(PostServiceImpl.class);
 
     @Autowired
-    private PostRepostory postRepository;
+    private PostRepository postRepository;
 
     @Override
     public PostModel create(PostModel postModel, UserBlogModel author) {
