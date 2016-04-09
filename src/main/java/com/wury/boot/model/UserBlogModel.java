@@ -21,6 +21,7 @@
 package com.wury.boot.model;
 
 import javax.persistence.*;
+import java.util.List;
 import java.util.Set;
 
 /**
@@ -46,8 +47,8 @@ public class UserBlogModel extends AbstractMyModel{
     @Column(name = "picture_location", nullable = false)
     private String pictureLocation;
 
-    @OneToMany(mappedBy = "userBlog", cascade = {CascadeType.ALL}, fetch = FetchType.LAZY)
-    private Set<UserBlogRoleModel> userRoles;
+    @OneToMany(mappedBy = "userBlogModel", cascade = {CascadeType.ALL}, fetch = FetchType.LAZY)
+    private List<UserBlogRoleModel> userRoles;
 
     public String getName() {
         return name;
@@ -89,11 +90,11 @@ public class UserBlogModel extends AbstractMyModel{
         this.pictureLocation = pictureLocation;
     }
 
-    public Set<UserBlogRoleModel> getUserRoles() {
+    public List<UserBlogRoleModel> getUserRoles() {
         return userRoles;
     }
 
-    public void setUserRoles(Set<UserBlogRoleModel> userRoles) {
+    public void setUserRoles(List<UserBlogRoleModel> userRoles) {
         this.userRoles = userRoles;
     }
 }

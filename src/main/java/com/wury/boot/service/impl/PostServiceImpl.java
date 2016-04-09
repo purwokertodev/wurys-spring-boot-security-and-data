@@ -13,6 +13,7 @@ import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
 
@@ -39,6 +40,13 @@ public class PostServiceImpl implements PostService {
     public Optional<PostModel> findOne(UUID id) {
         LOGGER.debug("FIND ONE"+id);
         return Optional.ofNullable(postRepository.findOne(id));
+    }
+
+    @Override
+    @Transactional(readOnly = true)
+    public List<PostModel> findAll() {
+        LOGGER.debug("FIND ALL WITH COLLECTION");
+        return postRepository.findAll();
     }
 
     @Override

@@ -1,15 +1,18 @@
 package com.wury.boot.service.impl;
 
+import com.wury.boot.form.UserBlogForm;
 import com.wury.boot.model.UserBlogModel;
 import com.wury.boot.repository.UserBlogRepository;
 import com.wury.boot.service.api.UserBlogService;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Sort;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Collection;
+import java.util.Date;
 import java.util.Optional;
 import java.util.UUID;
 
@@ -26,8 +29,19 @@ public class UserBlogServiceImpl implements UserBlogService {
     private UserBlogRepository userBlogRepository;
 
     @Override
-    public UserBlogModel create(UserBlogModel m) {
-        return userBlogRepository.save(m);
+    public UserBlogModel create(UserBlogForm form) {
+        UserBlogModel u = new UserBlogModel();
+        u.setName(form.getName());
+        u.setEmail(form.getEmail());
+        u.setWebsite(form.getWebsite());
+        u.setPassword(new BCryptPasswordEncoder().encode(form.getPassword()));
+        u.setPictureLocation(form.getPictureLocation());
+        u.setUserRoles(form.getUserRoles());
+        u.setCreatedAt(new Date());
+        u.setCreatedById(UUID.randomUUID());
+        u.setUpdatedAt(new Date());
+        u.setUpdatedById(UUID.randomUUID());
+        return userBlogRepository.save(u);
     }
 
     @Override
@@ -39,7 +53,7 @@ public class UserBlogServiceImpl implements UserBlogService {
 
     @Override
     @Transactional(readOnly = true)
-    public Optional<UserBlogModel> findOneByEmail(String email) {
+    public Optional<UserBlogModel> findByEmail(String email) {
         return userBlogRepository.findByEmail(email);
     }
 

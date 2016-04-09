@@ -36,10 +36,10 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         httpSecurity.csrf().disable();
         httpSecurity.headers().frameOptions().disable();
 
-        httpSecurity.authorizeRequests().antMatchers("/stylesheets/**", "/javascript/**", "/images/**", "/resources/**").permitAll();
+        httpSecurity.authorizeRequests().antMatchers("/stylesheets/**", "/javascripts/**", "/images/**", "/resources/**").permitAll();
 
         httpSecurity.authorizeRequests()
-                .antMatchers("/", "/home", "/signin", "/registration", "/error/**").permitAll()
+                .antMatchers("/", "/home", "/signin/**", "/registration/**", "/error/**").permitAll()
 				.antMatchers("/author/**").hasAuthority("AUTHOR")
                 .anyRequest().fullyAuthenticated()
                 .and()

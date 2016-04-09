@@ -1,5 +1,6 @@
 package com.wury.boot.service.api;
 
+import com.wury.boot.form.UserBlogForm;
 import com.wury.boot.model.UserBlogModel;
 
 import java.util.Collection;
@@ -11,8 +12,8 @@ import java.util.UUID;
  */
 public interface UserBlogService {
 
-    UserBlogModel create(UserBlogModel m);
+    UserBlogModel create(UserBlogForm form);
     Optional<UserBlogModel> findOne(UUID id);
-    Optional<UserBlogModel> findOneByEmail(String email);
+    Optional<UserBlogModel> findByEmail(String email);
     Collection<UserBlogModel> findAll();
 }

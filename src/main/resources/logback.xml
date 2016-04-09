@@ -14,10 +14,16 @@
             <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
         </encoder>
     </appender>
-    <logger name="com.wury.boot.controller" level="WARN">
+    <logger name="com.wury.boot.controller" level="DEBUG">
         <appender-ref ref="FILE" />
     </logger>
-    <logger name="com.wury.boot.service" level="INFO">
+    <logger name="com.wury.boot.service" level="DEBUG">
+        <appender-ref ref="FILE" />
+    </logger>
+    <logger name="com.wury.boot.validator" level="DEBUG">
+        <appender-ref ref="FILE" />
+    </logger>
+    <logger name="com.wury.boot.repository" level="DEBUG">
         <appender-ref ref="FILE" />
     </logger>
 

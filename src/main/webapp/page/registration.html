@@ -17,7 +17,63 @@
                 <h3>Registration</h3>
             </div>
             <div class="panel-body">
+                <form th:action="@{/registration}" th:object="${userBlogForm}" method="post" enctype="multipart/form-data" class="form-horizontal" role="form">
 
+                    <div th:if="${#fields.hasGlobalErrors()}"
+                         class="has-error col-lg-offset-3 alert alert-dismissible alert-danger">
+                        <button type="button" class="close" data-dismiss="alert">×</button>
+                        <label class="control-label" th:each="err : ${#fields.globalErrors()}" th:text="${err}">...</label>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-sm-2" for="full_name">Full Name:</label>
+                        <div class="col-sm-4">
+                            <input type="text" required="true" class="form-control" id="full_name" th:field="*{name}" placeholder="Full name"/>
+                        </div>
+
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-2" for="picture">Profile Picture:</label>
+                        <div class="col-sm-4">
+                            <input type="file" required="true" class="form-control" id="picture" name="picture" accept="image/*"/>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-2" for="picture">Picture preview:</label>
+                        <div class="col-sm-4">
+                            <img id="image_upload_preview" class="img-rounded" alt="My Picture" width="304" height="236"/>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-2" for="email">Email address:</label>
+                        <div class="col-sm-4">
+                            <input type="email" required="true" class="form-control" id="email" th:field="*{email}" placeholder="Email"/>
+                        </div>
+
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-2" for="website">Website:</label>
+                        <div class="col-sm-4">
+                            <input type="text" required="true" class="form-control" id="website" th:field="*{website}" placeholder="Website"/>
+                        </div>
+
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-2" for="pwd1">Password:</label>
+                        <div class="col-sm-4">
+                            <input type="password" required="true" class="form-control" id="pwd1" th:field="*{password}" placeholder="Password" onchange="checkPassword(); return false;" onkeyup="checkPassword(); return false;"/>
+                        </div>
+                        <span id="passwordLengthMessage"></span>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-2" for="pwd2">Confirm Password:</label>
+                        <div class="col-sm-4">
+                            <input type="password" required="true" class="form-control" id="pwd2" th:field="*{passwordRepeated}" placeholder="Type your password again" onchange="checkPassord(); return false;" onkeyup="checkPassword(); return false;"/>
+                        </div>
+                        <span id="confirmMessage"></span>
+                    </div>
+                    <button type="submit" class="btn btn-primary" id="sm_button" disabled="true">Submit</button>
+                </form>
             </div>
         </div>
     </div>

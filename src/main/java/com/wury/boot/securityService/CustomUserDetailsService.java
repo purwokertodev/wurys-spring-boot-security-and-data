@@ -2,7 +2,6 @@ package com.wury.boot.securityService;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Set;
 
 import com.wury.boot.model.UserBlogModel;
 import com.wury.boot.model.UserBlogRoleModel;
@@ -31,7 +30,7 @@ public class CustomUserDetailsService implements UserDetailsService {
     public UserDetails loadUserByUsername(String username)
             throws UsernameNotFoundException {
 
-        UserBlogModel userBlogModel = userBlogService.findOneByEmail(username);
+        UserBlogModel userBlogModel = userBlogService.findByEmail(username).get();
         List<GrantedAuthority> authorities = buildUserAuthority(userBlogModel.getUserRoles());
 
         return buildUserForAuthentication(userBlogModel, authorities);
@@ -43,7 +42,7 @@ public class CustomUserDetailsService implements UserDetailsService {
                 true, true, true, true, authorities);
     }
 
-    private List<GrantedAuthority> buildUserAuthority(Set<UserBlogRoleModel> userRoles) {
+    private List<GrantedAuthority> buildUserAuthority(List<UserBlogRoleModel> userRoles) {
 
         List<GrantedAuthority> authorities = new ArrayList<GrantedAuthority>(0);
         for (UserBlogRoleModel userRole : userRoles) {

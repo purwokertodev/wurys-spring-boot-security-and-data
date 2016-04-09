@@ -31,7 +31,8 @@ import org.hibernate.annotations.Type;
 
 /**
  *
- * @author WURI Supper class untuk semua class model/entity
+ * @author WURI Super class untuk semua class model/entity
+ * super class for all entity class
  */
 @MappedSuperclass
 public abstract class AbstractMyModel implements IMyModel {
@@ -65,6 +66,13 @@ public abstract class AbstractMyModel implements IMyModel {
     @Column(name = "deleted_by_id")
     @Type(type = "pg-uuid")
     private UUID deletedById;
+
+    public AbstractMyModel(Date createdAt, UUID createdById, Date updatedAt, UUID updatedById) {
+        this.createdAt = createdAt;
+        this.createdById = createdById;
+        this.updatedAt = updatedAt;
+        this.updatedById = updatedById;
+    }
 
     public UUID getId() {
         return id;

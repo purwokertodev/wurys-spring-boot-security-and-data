@@ -40,6 +40,7 @@ public class WebConfiguration extends WebMvcConfigurerAdapter {
         registry.addViewController("/signin").setViewName("signin");
         registry.addViewController("/error/error404").setViewName("error404");
         registry.addViewController("/error/error505").setViewName("error505");
+        registry.addViewController("/error").setViewName("error");
     }
 
     @Bean
