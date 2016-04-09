@@ -29,7 +29,7 @@ public class MyGenericRepositoryImpl<T extends AbstractMyModel, ID extends Seria
 
     private final EntityManager entityManager;
     private final JpaEntityInformation<T, ?> entityInformation;
-    private Class<?> springDateRepositoryInterface;
+    private Class<?> springDataRepositoryInterface;
 
     public MyGenericRepositoryImpl(JpaEntityInformation<T, ?> entityInformation, EntityManager entityManager) {
         super(entityInformation, entityManager);
@@ -40,12 +40,12 @@ public class MyGenericRepositoryImpl<T extends AbstractMyModel, ID extends Seria
 
 
 
-    public Class<?> getSpringDateRepositoryInterface() {
-        return springDateRepositoryInterface;
+    public Class<?> getSpringDataRepositoryInterface() {
+        return springDataRepositoryInterface;
     }
 
-    public void setSpringDateRepositoryInterface(Class<?> springDateRepositoryInterface) {
-        this.springDateRepositoryInterface = springDateRepositoryInterface;
+    public void setSpringDataRepositoryInterface(Class<?> springDataRepositoryInterface) {
+        this.springDataRepositoryInterface = springDataRepositoryInterface;
     }
 
 
