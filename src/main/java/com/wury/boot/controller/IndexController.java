@@ -25,8 +25,6 @@ import javax.validation.Valid;
 import java.io.BufferedOutputStream;
 import java.io.File;
 import java.io.FileOutputStream;
-import java.io.IOException;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
@@ -56,12 +54,12 @@ public class IndexController {
     @Autowired
     private UserBlogFormValidator userBlogFormValidator;
 
-    @InitBinder(value = "userBlogForm")
-    public void initUserBlogBinder(WebDataBinder binder){
-        binder.addValidators(userBlogFormValidator);
-    }
+//    @InitBinder(value = "userBlogForm")
+//    public void initUserBlogBinder(WebDataBinder binder){
+//        binder.addValidators(userBlogFormValidator);
+//    }
 
-    @RequestMapping(value = "/home")
+    @RequestMapping(value = {"/", "/home"})
     public String postRedirect(HttpServletRequest request){
         request.getSession().setAttribute(SESSION_PAGED_LIST_HOLDER_POSTS, null);
         return "redirect:/home/page/1";
@@ -101,6 +99,8 @@ public class IndexController {
                                      BindingResult result, RedirectAttributes redirectAttributes){
         LOGGER.debug("EXECUTE REGISTRATION");
 
+        userBlogFormValidator.validate(form, result);
+
         if(result.hasErrors()){
             return "registration";
         }
@@ -123,7 +123,7 @@ public class IndexController {
             for(UserBlogRoleModel roleUser:listRoleModel){
                 userBlogRoleRepository.save(roleUser);
             }
-            redirectAttributes.addFlashAttribute("messageSuccessRegistration", "you have successfully registration..");
+            redirectAttributes.addFlashAttribute("messageSuccessRegistration", "You have successfully registration..");
         }
 
         return "redirect:/signin";

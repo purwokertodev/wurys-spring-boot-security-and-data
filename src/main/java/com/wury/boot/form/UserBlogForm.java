@@ -2,6 +2,7 @@ package com.wury.boot.form;
 
 import com.wury.boot.model.UserBlogRoleModel;
 import com.wury.boot.validator.EmailValidator;
+import org.hibernate.validator.constraints.NotEmpty;
 
 import javax.persistence.Basic;
 import java.util.List;
@@ -14,9 +15,13 @@ public class UserBlogForm {
     private String name = "";
     @Basic
     @EmailValidator
+    @NotEmpty
     private String email = "";
+    @NotEmpty
     private String website = "";
+    @NotEmpty
     private String password = "";
+    @NotEmpty
     private String passwordRepeated = "";
     private String pictureLocation = "";
     private List<UserBlogRoleModel> userRoles;

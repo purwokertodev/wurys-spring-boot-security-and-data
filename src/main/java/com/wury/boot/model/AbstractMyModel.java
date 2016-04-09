@@ -67,6 +67,8 @@ public abstract class AbstractMyModel implements IMyModel {
     @Type(type = "pg-uuid")
     private UUID deletedById;
 
+    public AbstractMyModel(){}
+
     public AbstractMyModel(Date createdAt, UUID createdById, Date updatedAt, UUID updatedById) {
         this.createdAt = createdAt;
         this.createdById = createdById;

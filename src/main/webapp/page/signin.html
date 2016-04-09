@@ -17,6 +17,8 @@
                 <h3>Sign In</h3>
             </div>
             <div class="panel-body">
+                <div role="alert" th:if="${messageSuccessRegistration}"
+                     th:class="'alert alert-dismissible alert-success'" th:text="${messageSuccessRegistration}"><span class="close" data-dismiss="alert">&times;</span></div>
                 <form th:action="@{/login-process}" method="POST" class="form-horizontal" role="form">
                     <div class="form-group">
                         <label class="control-label col-sm-2" for="email">Email address:</label>
@@ -31,7 +33,7 @@
                             <input type="password" class="form-control" id="pwd" name="password" placeholder="Your Password" onchange="checkLoginForm(); return false;" onkeyup="checkLoginForm(); return false;"/>
                         </div>
                     </div>
-                    <button type="submit" class="btn btn-default" id="login_button" >Login</button>
+                    <button type="submit" class="btn btn-default" id="login_button" disabled="true" >Login</button>
                 </form>
             </div>
         </div>

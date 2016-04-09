@@ -33,15 +33,15 @@ public class UserBlogFormValidator implements Validator {
 
     private void validatePasswords(Errors errors, UserBlogForm form) {
         if (!form.getPassword().equals(form.getPasswordRepeated())) {
-            LOGGER.debug("PASSWORD VALIDATING "+form.getPassword()+" = "+form.getPasswordRepeated());
-            errors.reject("password.no_match", "Passwords do not match");
+            LOGGER.debug("VALIDATING PASSWORD");
+            errors.rejectValue("password","password.no_match", "Passwords do not match");
         }
     }
 
     private void validateEmail(Errors errors, UserBlogForm form) {
         if (userBlogService.findByEmail(form.getEmail()).isPresent()) {
-            LOGGER.debug("VALIDATING EMAIL "+form.getEmail());
-            errors.reject("email.exists", "User with this email already exists");
+            LOGGER.debug("VALIDATING EMAIL ");
+            errors.rejectValue("email","email.exists", "User with this email already exists");
         }
     }
 

@@ -10,6 +10,4 @@ import java.util.UUID;
  */
 public interface UserBlogRoleRepository extends MyGenericRepository<UserBlogRoleModel, UUID> {
 
-    public Optional<UserBlogRoleModel> findByRoleName(String roleName);
-
 }

@@ -18,7 +18,7 @@ import static java.lang.annotation.ElementType.*;
 @Constraint(validatedBy = {})
 @Documented
 public @interface EmailValidator {
-    String message() default "{ExtendedEmailValidator.email}";
+    String message() default "{EmailValidator.email}";
     Class<?>[] groups() default {};
     Class<? extends Payload>[] payload() default {};
 }
