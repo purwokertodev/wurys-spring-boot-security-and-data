@@ -1,79 +1,79 @@
-16:16:35.395 [main] INFO  com.wury.boot.MyBootApplication - Starting MyBootApplication on WURI-PC with PID 3884 (E:\JIMAT\spring-data-project\boot-security-wury\build\classes\main started by WURI in E:\JIMAT\spring-data-project\boot-security-wury)
-16:16:35.400 [main] INFO  com.wury.boot.MyBootApplication - No active profile set, falling back to default profiles: default
-16:16:35.607 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 5.2.4.Final
-16:16:36.133 [main] INFO  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1b68b9a4: startup date [Sat Apr 09 16:16:36 ICT 2016]; root of context hierarchy
-16:16:40.180 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$e1b8e0ef] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-16:16:41.583 [main] INFO  o.s.b.c.e.t.TomcatEmbeddedServletContainer - Tomcat initialized with port(s): 8080 (http)
-16:16:41.614 [main] INFO  o.a.catalina.core.StandardService - Starting service Tomcat
-16:16:41.617 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.0.32
-16:16:42.015 [localhost-startStop-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-16:16:42.015 [localhost-startStop-1] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 5888 ms
-16:16:45.652 [localhost-startStop-1] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Building JPA container EntityManagerFactory for persistence unit 'default'
-16:16:45.685 [localhost-startStop-1] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+16:47:02.014 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 5.2.4.Final
+16:47:02.092 [main] INFO  com.wury.boot.MyBootApplication - Starting MyBootApplication on WURI-PC with PID 6152 (E:\JIMAT\spring-data-project\boot-security-wury\build\classes\main started by WURI in E:\JIMAT\spring-data-project\boot-security-wury)
+16:47:02.093 [main] INFO  com.wury.boot.MyBootApplication - No active profile set, falling back to default profiles: default
+16:47:02.512 [main] INFO  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1b68b9a4: startup date [Tue Apr 19 16:47:02 ICT 2016]; root of context hierarchy
+16:47:05.990 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$f62727c4] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+16:47:07.274 [main] INFO  o.s.b.c.e.t.TomcatEmbeddedServletContainer - Tomcat initialized with port(s): 8080 (http)
+16:47:07.306 [main] INFO  o.a.catalina.core.StandardService - Starting service Tomcat
+16:47:07.308 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.0.32
+16:47:07.613 [localhost-startStop-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+16:47:07.613 [localhost-startStop-1] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 5106 ms
+16:47:09.128 [localhost-startStop-1] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Building JPA container EntityManagerFactory for persistence unit 'default'
+16:47:09.166 [localhost-startStop-1] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
 	name: default
 	...]
-16:16:45.817 [localhost-startStop-1] INFO  org.hibernate.Version - HHH000412: Hibernate Core {4.3.11.Final}
-16:16:45.820 [localhost-startStop-1] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
-16:16:45.822 [localhost-startStop-1] INFO  org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
-16:16:46.246 [localhost-startStop-1] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
-16:16:47.102 [localhost-startStop-1] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
-16:16:47.123 [localhost-startStop-1] INFO  o.h.e.j.internal.LobCreatorBuilder - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
-16:16:47.394 [localhost-startStop-1] INFO  o.h.h.i.a.ASTQueryTranslatorFactory - HHH000397: Using ASTQueryTranslatorFactory
-16:16:49.494 [localhost-startStop-1] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@44798a10, org.springframework.security.web.context.SecurityContextPersistenceFilter@6b8a410c, org.springframework.security.web.header.HeaderWriterFilter@179f57a4, org.springframework.security.web.authentication.logout.LogoutFilter@6b318ec7, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@1b8cb8bd, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7ceff95b, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@742ed8af, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7318ed8, org.springframework.security.web.session.SessionManagementFilter@131f4ef5, org.springframework.security.web.access.ExceptionTranslationFilter@36481dfb, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@b1fa23b]
-16:16:49.732 [localhost-startStop-1] INFO  o.s.b.c.e.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
-16:16:49.734 [localhost-startStop-1] INFO  o.s.b.c.e.DelegatingFilterProxyRegistrationBean - Mapping filter: 'springSecurityFilterChain' to: [/*]
-16:16:49.734 [localhost-startStop-1] INFO  o.s.b.c.e.FilterRegistrationBean - Mapping filter: 'filterChainProxy' to: [/*]
-16:16:49.735 [localhost-startStop-1] INFO  o.s.b.c.e.ServletRegistrationBean - Mapping servlet: 'webServlet' to [/console/*]
-16:16:49.738 [localhost-startStop-1] INFO  o.s.b.c.e.ServletRegistrationBean - Mapping servlet: 'dispatcherServlet' to [/]
-16:16:51.118 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/author/dashboard]}" onto public org.springframework.web.servlet.ModelAndView com.wury.boot.controller.DashboardController.dashboard()
-16:16:51.132 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/home/page/{pageNumber}],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.wury.boot.controller.IndexController.index(javax.servlet.http.HttpServletRequest,java.lang.Integer)
-16:16:51.133 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/registration],methods=[GET]}" onto public java.lang.String com.wury.boot.controller.IndexController.registration(com.wury.boot.form.UserBlogForm,org.springframework.ui.Model)
-16:16:51.133 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/registration],methods=[POST]}" onto public java.lang.String com.wury.boot.controller.IndexController.registrationFinish(com.wury.boot.form.UserBlogForm,org.springframework.web.multipart.MultipartFile,org.springframework.validation.BindingResult,org.springframework.web.servlet.mvc.support.RedirectAttributes)
-16:16:51.134 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/ || /home]}" onto public java.lang.String com.wury.boot.controller.IndexController.postRedirect(javax.servlet.http.HttpServletRequest)
-16:16:51.162 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
-16:16:51.183 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
-16:16:51.263 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Root mapping to handler of type [class org.springframework.web.servlet.mvc.ParameterizableViewController]
-16:16:51.264 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/signin] onto handler of type [class org.springframework.web.servlet.mvc.ParameterizableViewController]
-16:16:51.264 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/error/error404] onto handler of type [class org.springframework.web.servlet.mvc.ParameterizableViewController]
-16:16:51.264 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/error/error505] onto handler of type [class org.springframework.web.servlet.mvc.ParameterizableViewController]
-16:16:51.264 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/error] onto handler of type [class org.springframework.web.servlet.mvc.ParameterizableViewController]
-16:16:51.309 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/resources/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-16:16:51.310 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/stylesheets/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-16:16:51.310 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/javascripts/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-16:16:51.310 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/images/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-16:16:51.375 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler]
-16:16:51.639 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1b68b9a4: startup date [Sat Apr 09 16:16:36 ICT 2016]; root of context hierarchy
-16:16:52.673 [main] INFO  o.s.b.a.s.AuthenticationManagerConfiguration - 
+16:47:09.336 [localhost-startStop-1] INFO  org.hibernate.Version - HHH000412: Hibernate Core {4.3.11.Final}
+16:47:09.339 [localhost-startStop-1] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+16:47:09.342 [localhost-startStop-1] INFO  org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
+16:47:09.811 [localhost-startStop-1] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+16:47:10.592 [localhost-startStop-1] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+16:47:10.612 [localhost-startStop-1] INFO  o.h.e.j.internal.LobCreatorBuilder - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+16:47:10.924 [localhost-startStop-1] INFO  o.h.h.i.a.ASTQueryTranslatorFactory - HHH000397: Using ASTQueryTranslatorFactory
+16:47:12.899 [localhost-startStop-1] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2f440c4c, org.springframework.security.web.context.SecurityContextPersistenceFilter@5189598b, org.springframework.security.web.header.HeaderWriterFilter@58faac3a, org.springframework.security.web.authentication.logout.LogoutFilter@756632ea, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@1396a41f, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6bf4ee32, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1700299e, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@30da7b67, org.springframework.security.web.session.SessionManagementFilter@6ba78feb, org.springframework.security.web.access.ExceptionTranslationFilter@23122dae, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2135471e]
+16:47:13.160 [localhost-startStop-1] INFO  o.s.b.c.e.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+16:47:13.162 [localhost-startStop-1] INFO  o.s.b.c.e.DelegatingFilterProxyRegistrationBean - Mapping filter: 'springSecurityFilterChain' to: [/*]
+16:47:13.163 [localhost-startStop-1] INFO  o.s.b.c.e.FilterRegistrationBean - Mapping filter: 'filterChainProxy' to: [/*]
+16:47:13.163 [localhost-startStop-1] INFO  o.s.b.c.e.ServletRegistrationBean - Mapping servlet: 'webServlet' to [/console/*]
+16:47:13.165 [localhost-startStop-1] INFO  o.s.b.c.e.ServletRegistrationBean - Mapping servlet: 'dispatcherServlet' to [/]
+16:47:14.338 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/author/dashboard]}" onto public org.springframework.web.servlet.ModelAndView com.wury.boot.controller.DashboardController.dashboard(org.springframework.security.core.Authentication)
+16:47:14.340 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/home/page/{pageNumber}],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.wury.boot.controller.IndexController.index(javax.servlet.http.HttpServletRequest,java.lang.Integer)
+16:47:14.340 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/registration],methods=[POST]}" onto public java.lang.String com.wury.boot.controller.IndexController.registrationFinish(com.wury.boot.form.UserBlogForm,org.springframework.web.multipart.MultipartFile,org.springframework.validation.BindingResult,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+16:47:14.341 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/registration],methods=[GET]}" onto public java.lang.String com.wury.boot.controller.IndexController.registration(com.wury.boot.form.UserBlogForm,org.springframework.ui.Model)
+16:47:14.341 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/ || /home]}" onto public java.lang.String com.wury.boot.controller.IndexController.postRedirect(javax.servlet.http.HttpServletRequest)
+16:47:14.348 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+16:47:14.349 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+16:47:14.373 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Root mapping to handler of type [class org.springframework.web.servlet.mvc.ParameterizableViewController]
+16:47:14.373 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/signin] onto handler of type [class org.springframework.web.servlet.mvc.ParameterizableViewController]
+16:47:14.374 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/error/error404] onto handler of type [class org.springframework.web.servlet.mvc.ParameterizableViewController]
+16:47:14.374 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/error/error505] onto handler of type [class org.springframework.web.servlet.mvc.ParameterizableViewController]
+16:47:14.374 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/error] onto handler of type [class org.springframework.web.servlet.mvc.ParameterizableViewController]
+16:47:14.393 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/resources/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+16:47:14.393 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/stylesheets/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+16:47:14.393 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/javascripts/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+16:47:14.393 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/images/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+16:47:14.401 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler]
+16:47:14.488 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1b68b9a4: startup date [Tue Apr 19 16:47:02 ICT 2016]; root of context hierarchy
+16:47:15.160 [main] INFO  o.s.b.a.s.AuthenticationManagerConfiguration - 
 
-Using default security password: 90340393-de9e-4e4e-96f0-ea7252b907df
+Using default security password: 2f57efa5-cbe2-4354-b154-101ce327ad18
 
-16:16:52.888 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
-16:16:52.970 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
-16:16:52.981 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
-16:16:53.005 [main] INFO  o.a.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
-16:16:53.139 [main] INFO  o.s.b.c.e.t.TomcatEmbeddedServletContainer - Tomcat started on port(s): 8080 (http)
-16:16:53.146 [main] INFO  com.wury.boot.MyBootApplication - Started MyBootApplication in 18.867 seconds (JVM running for 20.245)
-16:17:00.556 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
-16:17:00.557 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started
-16:17:00.615 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 58 ms
-16:17:00.964 [http-nio-8080-exec-3] DEBUG c.w.boot.controller.IndexController - Logger inside IndexController
-16:17:00.964 [http-nio-8080-exec-3] DEBUG c.w.boot.controller.IndexController - Logger inside IndexController
-16:17:00.983 [http-nio-8080-exec-3] DEBUG c.w.b.service.impl.PostServiceImpl - FIND ALL WITH COLLECTION
-16:17:00.983 [http-nio-8080-exec-3] DEBUG c.w.b.service.impl.PostServiceImpl - FIND ALL WITH COLLECTION
-16:17:01.300 [http-nio-8080-exec-3] INFO  org.thymeleaf.TemplateEngine - [THYMELEAF] INITIALIZING TEMPLATE ENGINE
-16:17:01.456 [http-nio-8080-exec-3] INFO  o.t.t.AbstractTemplateResolver - [THYMELEAF] INITIALIZING TEMPLATE RESOLVER: org.thymeleaf.templateresolver.ServletContextTemplateResolver
-16:17:01.457 [http-nio-8080-exec-3] INFO  o.t.t.AbstractTemplateResolver - [THYMELEAF] TEMPLATE RESOLVER INITIALIZED OK
-16:17:01.457 [http-nio-8080-exec-3] INFO  o.t.m.AbstractMessageResolver - [THYMELEAF] INITIALIZING MESSAGE RESOLVER: org.thymeleaf.spring4.messageresolver.SpringMessageResolver
-16:17:01.457 [http-nio-8080-exec-3] INFO  o.t.m.AbstractMessageResolver - [THYMELEAF] MESSAGE RESOLVER INITIALIZED OK
-16:17:01.465 [http-nio-8080-exec-3] INFO  org.thymeleaf.TemplateEngine.CONFIG - [THYMELEAF] TEMPLATE ENGINE CONFIGURATION:
+16:47:15.592 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+16:47:15.671 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+16:47:15.682 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+16:47:15.703 [main] INFO  o.a.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+16:47:15.768 [main] INFO  o.s.b.c.e.t.TomcatEmbeddedServletContainer - Tomcat started on port(s): 8080 (http)
+16:47:15.776 [main] INFO  com.wury.boot.MyBootApplication - Started MyBootApplication in 15.083 seconds (JVM running for 16.193)
+16:47:21.051 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+16:47:21.052 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started
+16:47:21.092 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 40 ms
+16:47:21.283 [http-nio-8080-exec-3] DEBUG c.w.boot.controller.IndexController - Logger inside IndexController
+16:47:21.283 [http-nio-8080-exec-3] DEBUG c.w.boot.controller.IndexController - Logger inside IndexController
+16:47:21.322 [http-nio-8080-exec-3] DEBUG c.w.b.service.impl.PostServiceImpl - FIND ALL WITH COLLECTION
+16:47:21.322 [http-nio-8080-exec-3] DEBUG c.w.b.service.impl.PostServiceImpl - FIND ALL WITH COLLECTION
+16:47:21.619 [http-nio-8080-exec-3] INFO  org.thymeleaf.TemplateEngine - [THYMELEAF] INITIALIZING TEMPLATE ENGINE
+16:47:21.713 [http-nio-8080-exec-3] INFO  o.t.t.AbstractTemplateResolver - [THYMELEAF] INITIALIZING TEMPLATE RESOLVER: org.thymeleaf.templateresolver.ServletContextTemplateResolver
+16:47:21.713 [http-nio-8080-exec-3] INFO  o.t.t.AbstractTemplateResolver - [THYMELEAF] TEMPLATE RESOLVER INITIALIZED OK
+16:47:21.713 [http-nio-8080-exec-3] INFO  o.t.m.AbstractMessageResolver - [THYMELEAF] INITIALIZING MESSAGE RESOLVER: org.thymeleaf.spring4.messageresolver.SpringMessageResolver
+16:47:21.713 [http-nio-8080-exec-3] INFO  o.t.m.AbstractMessageResolver - [THYMELEAF] MESSAGE RESOLVER INITIALIZED OK
+16:47:21.720 [http-nio-8080-exec-3] INFO  org.thymeleaf.TemplateEngine.CONFIG - [THYMELEAF] TEMPLATE ENGINE CONFIGURATION:
 [THYMELEAF] * Cache Factory implementation: org.thymeleaf.cache.StandardCacheManager
 [THYMELEAF] * Template modes:
-[THYMELEAF]     * VALIDXHTML
-[THYMELEAF]     * LEGACYHTML5
 [THYMELEAF]     * XML
 [THYMELEAF]     * VALIDXML
 [THYMELEAF]     * XHTML
 [THYMELEAF]     * HTML5
+[THYMELEAF]     * VALIDXHTML
+[THYMELEAF]     * LEGACYHTML5
 [THYMELEAF] * Template resolvers (in order):
 [THYMELEAF]     * org.thymeleaf.templateresolver.ServletContextTemplateResolver
 [THYMELEAF] * Message resolvers (in order):
@@ -85,106 +85,8 @@ Using default security password: 90340393-de9e-4e4e-96f0-ea7252b907df
 [THYMELEAF] * Dialect [3 of 3]: org.thymeleaf.extras.springsecurity3.dialect.SpringSecurityDialect
 [THYMELEAF]     * Prefix: "sec"
 [THYMELEAF] TEMPLATE ENGINE CONFIGURED OK
-16:17:01.466 [http-nio-8080-exec-3] INFO  org.thymeleaf.TemplateEngine - [THYMELEAF] TEMPLATE ENGINE INITIALIZED
-16:17:27.351 [http-nio-8080-exec-8] DEBUG c.w.boot.controller.IndexController - EXECUTE REGISTRATION
-16:17:27.351 [http-nio-8080-exec-8] DEBUG c.w.boot.controller.IndexController - EXECUTE REGISTRATION
-16:17:27.351 [http-nio-8080-exec-8] DEBUG c.w.b.v.UserBlogFormValidator - Validating userBlogFormcom.wury.boot.form.UserBlogForm@2d77d9b9
-16:17:27.351 [http-nio-8080-exec-8] DEBUG c.w.b.v.UserBlogFormValidator - Validating userBlogFormcom.wury.boot.form.UserBlogForm@2d77d9b9
-16:17:27.438 [http-nio-8080-exec-8] DEBUG c.w.b.v.UserBlogFormValidator - VALIDATING EMAIL 
-16:17:27.438 [http-nio-8080-exec-8] DEBUG c.w.b.v.UserBlogFormValidator - VALIDATING EMAIL 
-16:17:43.314 [http-nio-8080-exec-2] DEBUG c.w.boot.controller.IndexController - Logger inside IndexController
-16:17:43.314 [http-nio-8080-exec-2] DEBUG c.w.boot.controller.IndexController - Logger inside IndexController
-16:17:43.315 [http-nio-8080-exec-2] DEBUG c.w.b.service.impl.PostServiceImpl - FIND ALL WITH COLLECTION
-16:17:43.315 [http-nio-8080-exec-2] DEBUG c.w.b.service.impl.PostServiceImpl - FIND ALL WITH COLLECTION
-16:20:16.924 [main] INFO  com.wury.boot.MyBootApplication - Starting MyBootApplication on WURI-PC with PID 9664 (E:\JIMAT\spring-data-project\boot-security-wury\build\classes\main started by WURI in E:\JIMAT\spring-data-project\boot-security-wury)
-16:20:16.930 [main] INFO  com.wury.boot.MyBootApplication - No active profile set, falling back to default profiles: default
-16:20:17.011 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 5.2.4.Final
-16:20:17.503 [main] INFO  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1b68b9a4: startup date [Sat Apr 09 16:20:17 ICT 2016]; root of context hierarchy
-16:20:22.104 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$e1b8e0ef] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-16:20:23.338 [main] INFO  o.s.b.c.e.t.TomcatEmbeddedServletContainer - Tomcat initialized with port(s): 8080 (http)
-16:20:23.371 [main] INFO  o.a.catalina.core.StandardService - Starting service Tomcat
-16:20:23.373 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.0.32
-16:20:23.705 [localhost-startStop-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-16:20:23.706 [localhost-startStop-1] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 6208 ms
-16:20:26.171 [localhost-startStop-1] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Building JPA container EntityManagerFactory for persistence unit 'default'
-16:20:26.217 [localhost-startStop-1] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
-	name: default
-	...]
-16:20:26.372 [localhost-startStop-1] INFO  org.hibernate.Version - HHH000412: Hibernate Core {4.3.11.Final}
-16:20:26.376 [localhost-startStop-1] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
-16:20:26.378 [localhost-startStop-1] INFO  org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
-16:20:26.907 [localhost-startStop-1] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
-16:20:27.673 [localhost-startStop-1] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
-16:20:27.698 [localhost-startStop-1] INFO  o.h.e.j.internal.LobCreatorBuilder - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
-16:20:27.985 [localhost-startStop-1] INFO  o.h.h.i.a.ASTQueryTranslatorFactory - HHH000397: Using ASTQueryTranslatorFactory
-16:20:29.928 [localhost-startStop-1] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7cb472bd, org.springframework.security.web.context.SecurityContextPersistenceFilter@7b26e8f1, org.springframework.security.web.header.HeaderWriterFilter@589ee8c5, org.springframework.security.web.authentication.logout.LogoutFilter@24a6ec4d, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@3a71f0f2, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6c365d68, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@347f556, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@ca092bd, org.springframework.security.web.session.SessionManagementFilter@30822e2c, org.springframework.security.web.access.ExceptionTranslationFilter@2a9bb0d4, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@56ad5d43]
-16:20:30.438 [localhost-startStop-1] INFO  o.s.b.c.e.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
-16:20:30.445 [localhost-startStop-1] INFO  o.s.b.c.e.DelegatingFilterProxyRegistrationBean - Mapping filter: 'springSecurityFilterChain' to: [/*]
-16:20:30.446 [localhost-startStop-1] INFO  o.s.b.c.e.FilterRegistrationBean - Mapping filter: 'filterChainProxy' to: [/*]
-16:20:30.447 [localhost-startStop-1] INFO  o.s.b.c.e.ServletRegistrationBean - Mapping servlet: 'webServlet' to [/console/*]
-16:20:30.457 [localhost-startStop-1] INFO  o.s.b.c.e.ServletRegistrationBean - Mapping servlet: 'dispatcherServlet' to [/]
-16:20:32.174 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/author/dashboard]}" onto public org.springframework.web.servlet.ModelAndView com.wury.boot.controller.DashboardController.dashboard()
-16:20:32.177 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/home/page/{pageNumber}],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.wury.boot.controller.IndexController.index(javax.servlet.http.HttpServletRequest,java.lang.Integer)
-16:20:32.177 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/registration],methods=[POST]}" onto public java.lang.String com.wury.boot.controller.IndexController.registrationFinish(com.wury.boot.form.UserBlogForm,org.springframework.web.multipart.MultipartFile,org.springframework.validation.BindingResult,org.springframework.web.servlet.mvc.support.RedirectAttributes)
-16:20:32.177 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/registration],methods=[GET]}" onto public java.lang.String com.wury.boot.controller.IndexController.registration(com.wury.boot.form.UserBlogForm,org.springframework.ui.Model)
-16:20:32.177 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/ || /home]}" onto public java.lang.String com.wury.boot.controller.IndexController.postRedirect(javax.servlet.http.HttpServletRequest)
-16:20:32.185 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
-16:20:32.186 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
-16:20:32.210 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Root mapping to handler of type [class org.springframework.web.servlet.mvc.ParameterizableViewController]
-16:20:32.211 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/signin] onto handler of type [class org.springframework.web.servlet.mvc.ParameterizableViewController]
-16:20:32.211 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/error/error404] onto handler of type [class org.springframework.web.servlet.mvc.ParameterizableViewController]
-16:20:32.211 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/error/error505] onto handler of type [class org.springframework.web.servlet.mvc.ParameterizableViewController]
-16:20:32.211 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/error] onto handler of type [class org.springframework.web.servlet.mvc.ParameterizableViewController]
-16:20:32.239 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/resources/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-16:20:32.240 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/stylesheets/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-16:20:32.240 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/javascripts/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-16:20:32.240 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/images/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-16:20:32.248 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler]
-16:20:32.371 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1b68b9a4: startup date [Sat Apr 09 16:20:17 ICT 2016]; root of context hierarchy
-16:20:32.992 [main] INFO  o.s.b.a.s.AuthenticationManagerConfiguration - 
-
-Using default security password: 4591bd81-70e1-4d1a-817f-021d5de11eae
-
-16:20:33.223 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
-16:20:33.304 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
-16:20:33.317 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
-16:20:33.353 [main] INFO  o.a.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
-16:20:33.423 [main] INFO  o.s.b.c.e.t.TomcatEmbeddedServletContainer - Tomcat started on port(s): 8080 (http)
-16:20:33.436 [main] INFO  com.wury.boot.MyBootApplication - Started MyBootApplication in 17.836 seconds (JVM running for 19.105)
-16:20:34.262 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
-16:20:34.262 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started
-16:20:34.324 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 61 ms
-16:20:34.543 [http-nio-8080-exec-3] DEBUG c.w.boot.controller.IndexController - Logger inside IndexController
-16:20:34.543 [http-nio-8080-exec-3] DEBUG c.w.boot.controller.IndexController - Logger inside IndexController
-16:20:34.564 [http-nio-8080-exec-3] DEBUG c.w.b.service.impl.PostServiceImpl - FIND ALL WITH COLLECTION
-16:20:34.564 [http-nio-8080-exec-3] DEBUG c.w.b.service.impl.PostServiceImpl - FIND ALL WITH COLLECTION
-16:20:34.922 [http-nio-8080-exec-3] INFO  org.thymeleaf.TemplateEngine - [THYMELEAF] INITIALIZING TEMPLATE ENGINE
-16:20:35.009 [http-nio-8080-exec-3] INFO  o.t.t.AbstractTemplateResolver - [THYMELEAF] INITIALIZING TEMPLATE RESOLVER: org.thymeleaf.templateresolver.ServletContextTemplateResolver
-16:20:35.009 [http-nio-8080-exec-3] INFO  o.t.t.AbstractTemplateResolver - [THYMELEAF] TEMPLATE RESOLVER INITIALIZED OK
-16:20:35.010 [http-nio-8080-exec-3] INFO  o.t.m.AbstractMessageResolver - [THYMELEAF] INITIALIZING MESSAGE RESOLVER: org.thymeleaf.spring4.messageresolver.SpringMessageResolver
-16:20:35.010 [http-nio-8080-exec-3] INFO  o.t.m.AbstractMessageResolver - [THYMELEAF] MESSAGE RESOLVER INITIALIZED OK
-16:20:35.021 [http-nio-8080-exec-3] INFO  org.thymeleaf.TemplateEngine.CONFIG - [THYMELEAF] TEMPLATE ENGINE CONFIGURATION:
-[THYMELEAF] * Cache Factory implementation: org.thymeleaf.cache.StandardCacheManager
-[THYMELEAF] * Template modes:
-[THYMELEAF]     * VALIDXHTML
-[THYMELEAF]     * LEGACYHTML5
-[THYMELEAF]     * XML
-[THYMELEAF]     * VALIDXML
-[THYMELEAF]     * XHTML
-[THYMELEAF]     * HTML5
-[THYMELEAF] * Template resolvers (in order):
-[THYMELEAF]     * org.thymeleaf.templateresolver.ServletContextTemplateResolver
-[THYMELEAF] * Message resolvers (in order):
-[THYMELEAF]     * org.thymeleaf.spring4.messageresolver.SpringMessageResolver
-[THYMELEAF] * Dialect [1 of 3]: org.thymeleaf.spring4.dialect.SpringStandardDialect
-[THYMELEAF]     * Prefix: "th"
-[THYMELEAF] * Dialect [2 of 3]: nz.net.ultraq.thymeleaf.LayoutDialect
-[THYMELEAF]     * Prefix: "layout"
-[THYMELEAF] * Dialect [3 of 3]: org.thymeleaf.extras.springsecurity3.dialect.SpringSecurityDialect
-[THYMELEAF]     * Prefix: "sec"
-[THYMELEAF] TEMPLATE ENGINE CONFIGURED OK
-16:20:35.023 [http-nio-8080-exec-3] INFO  org.thymeleaf.TemplateEngine - [THYMELEAF] TEMPLATE ENGINE INITIALIZED
-16:20:57.246 [http-nio-8080-exec-8] DEBUG c.w.boot.controller.IndexController - Logger inside IndexController
-16:20:57.246 [http-nio-8080-exec-8] DEBUG c.w.boot.controller.IndexController - Logger inside IndexController
-16:20:57.250 [http-nio-8080-exec-8] DEBUG c.w.b.service.impl.PostServiceImpl - FIND ALL WITH COLLECTION
-16:20:57.250 [http-nio-8080-exec-8] DEBUG c.w.b.service.impl.PostServiceImpl - FIND ALL WITH COLLECTION
+16:47:21.721 [http-nio-8080-exec-3] INFO  org.thymeleaf.TemplateEngine - [THYMELEAF] TEMPLATE ENGINE INITIALIZED
+16:50:28.846 [http-nio-8080-exec-9] DEBUG c.w.boot.controller.IndexController - Logger inside IndexController
+16:50:28.846 [http-nio-8080-exec-9] DEBUG c.w.boot.controller.IndexController - Logger inside IndexController
+16:50:28.847 [http-nio-8080-exec-9] DEBUG c.w.b.service.impl.PostServiceImpl - FIND ALL WITH COLLECTION
+16:50:28.847 [http-nio-8080-exec-9] DEBUG c.w.b.service.impl.PostServiceImpl - FIND ALL WITH COLLECTION
