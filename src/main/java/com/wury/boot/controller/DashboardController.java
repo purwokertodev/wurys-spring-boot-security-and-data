@@ -63,6 +63,7 @@ public class DashboardController {
         }
         CurrentUser currentUser = new CurrentUser(authentication, userBlogService);
         postService.create(form, currentUser.getUserNow());
+        redirectAttributes.addFlashAttribute("messageSuccessCreatePost", "You have successfully create a new post..");
         return "redirect:/author/new_post";
     }
 }

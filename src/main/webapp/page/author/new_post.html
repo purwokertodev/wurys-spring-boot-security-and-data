@@ -17,6 +17,10 @@
             <h3 th:text="${current_author}"></h3><h3>New post</h3>
         </div>
         <div class="panel-body">
+
+            <div role="alert" th:if="${messageSuccessCreatePost}"
+                 th:class="'alert alert-dismissible alert-success'" th:text="${messageSuccessCreatePost}"><span class="close" data-dismiss="alert">&times;</span></div>
+
             <form th:action="@{/author/new_post}" th:object="${postForm}" method="post" class="form-horizontal" role="form">
                 <div th:if="${#fields.hasGlobalErrors()}"
                      class="has-error col-lg-offset-3 alert alert-dismissible alert-danger">
@@ -36,7 +40,7 @@
                 <div class="form-group" th:classappend="${#fields.hasErrors('postContent')} ? 'has-error'">
                     <label class="control-label col-sm-2" for="post_content">Content :</label>
                     <div class="col-sm-4">
-                        <textarea cols="20" rows="10" th:field="*{postContent}" id="post_content" required="true"/>
+                        <textarea cols="80" rows="10" th:field="*{postContent}" id="post_content" required="true"/>
                         <label class="control-label" th:errors="*{postContent}">[error]</label>
                     </div>
 
