@@ -1,5 +1,6 @@
 package com.wury.boot.service.impl;
 
+import com.wury.boot.form.PostForm;
 import com.wury.boot.model.PostModel;
 import com.wury.boot.model.UserBlogModel;
 import com.wury.boot.repository.PostRepository;
@@ -30,8 +31,12 @@ public class PostServiceImpl implements PostService {
     private PostRepository postRepository;
 
     @Override
-    public PostModel create(PostModel postModel, UserBlogModel author) {
+    public PostModel create(PostForm form, UserBlogModel author) {
         LOGGER.debug("Create Post by "+author.getEmail());
+        PostModel postModel = new PostModel();
+        postModel.setUserBlogModel(author);
+        postModel.setPostTitle(form.getPostTitle());
+        postModel.setPostContent(form.getPostContent());
         return postRepository.save(postModel, author);
     }
 

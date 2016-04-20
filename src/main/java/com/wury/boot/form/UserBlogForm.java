@@ -12,6 +12,7 @@ import java.util.List;
  */
 public class UserBlogForm {
 
+    @NotEmpty
     private String name = "";
     @Basic
     @EmailValidator
