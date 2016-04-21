@@ -18,7 +18,22 @@
                 <h3>Home</h3>
             </div>
             <div class="panel-body">
-
+                <div th:each="post : ${posts.pageList}">
+                    <div class="alert alert-success">
+                        <h3>
+                            <a href="#" th:text="${post.postTitle}"></a>
+                        </h3>
+                        <time th:text="${#temporals.format(post.createdAt, 'dd/MMM/yyyy HH:mm')}">${post.createdAt}</time>
+                        <p th:text="${post.postContent}"></p>
+                        <p></p>
+                        <a href="#" class="btn btn-warning btn-sm"><img th:src="${post.userBlogModel.pictureLocation}"  class="img-rounded" alt="My Picture" width="40" height="40"/> <span class="badge" th:text="${post.userBlogModel.name}"></span></a><br/>
+                        <!--<time th:text="${#temporals.format(post.createdAt, 'dd/MMM/yyyy HH:mm')}"></time>-->
+                    </div>
+                </div>
+                    <div th:if="${pager.totalItems > 3}" class="row">
+                        <div th:replace="fragment/pagination :: [id='paginator']"
+                             th:remove="tag">Pagination Control</div>
+                    </div>
             </div>
         </div>
     </div>

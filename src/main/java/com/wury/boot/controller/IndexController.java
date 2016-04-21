@@ -40,7 +40,7 @@ public class IndexController {
     /**
      * constant for this class
      */
-    private static final Integer PAGE_SIZE_POST_LIST = 5;
+    private static final Integer PAGE_SIZE_POST_LIST = 3;
     private static final String BASE_URL_POST_ALL = "/home/page/";
     private static final String SESSION_PAGED_LIST_HOLDER_POSTS = "postList";
 
@@ -83,7 +83,7 @@ public class IndexController {
         request.getSession().setAttribute(SESSION_PAGED_LIST_HOLDER_POSTS, pagedListPost);
 
         mav.addObject("pager", currentPage(pagedListPost));
-        mav.addObject("post", pagedListPost);
+        mav.addObject("posts", pagedListPost);
         return mav;
     }
 
@@ -107,7 +107,7 @@ public class IndexController {
         if(!pictureFile.isEmpty()){
             String newPictureName = form.getEmail();
             String pictureLocation = "src/main/webapp/images/author_file/"+newPictureName+".jpg";
-            String pictureLocationValue = "images/author_file/"+newPictureName+".jpg";
+            String pictureLocationValue = "/images/author_file/"+newPictureName+".jpg";
             try{
                 BufferedOutputStream outputStream = new BufferedOutputStream(new FileOutputStream(new File(pictureLocation)));
                 FileCopyUtils.copy(pictureFile.getInputStream(), outputStream);
