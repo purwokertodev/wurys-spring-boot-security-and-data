@@ -72,4 +72,8 @@ public class PostServiceImpl implements PostService {
         PageRequest request = new PageRequest(pageNumber - 1, 50, Sort.Direction.ASC, "createdAt");
         return request;
     }
+
+    private Sort orderByCreatedAt(){
+        return new Sort(Sort.Direction.DESC, "createdAt");
+    }
 }

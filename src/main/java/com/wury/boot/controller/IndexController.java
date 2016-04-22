@@ -9,7 +9,9 @@ import com.wury.boot.validator.UserBlogFormValidator;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.support.MutableSortDefinition;
 import org.springframework.beans.support.PagedListHolder;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.util.FileCopyUtils;
@@ -28,6 +30,7 @@ import java.io.FileOutputStream;
 import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
+import java.util.UUID;
 
 /**
  * Created by WURI on 16/03/2016.
@@ -73,6 +76,7 @@ public class IndexController {
         if(pagedListPost == null){
             pagedListPost = new PagedListHolder<PostModel>(postService.findAll());
             pagedListPost.setPageSize(PAGE_SIZE_POST_LIST);
+            pagedListPost.setSort(new MutableSortDefinition("createdAt", true, true));
         }else{
             final int goToPage = pageNumber - 1;
             if (goToPage <= pagedListPost.getPageCount() && goToPage >= 0) {
@@ -127,6 +131,15 @@ public class IndexController {
         }
 
         return "redirect:/signin";
+    }
+
+    @RequestMapping(value = "/author_profile/{id}", method = RequestMethod.GET)
+    public ModelAndView authorProfile(@PathVariable("id") UUID id){
+        ModelAndView mav = new ModelAndView("author_detail");
+        UserBlogModel userBlogModel = userBlogService.findOne(id).get();
+        LOGGER.debug("AUTHOR PROFILE -> "+userBlogModel.getName());
+        mav.addObject("author", userBlogModel);
+        return mav;
     }
 
     private PagerModel currentPage(PagedListHolder<?> pagedListHolder) {

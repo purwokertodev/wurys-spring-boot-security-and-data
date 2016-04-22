@@ -23,11 +23,12 @@
                         <h3>
                             <a href="#" th:text="${post.postTitle}"></a>
                         </h3>
-                        <time th:text="${#temporals.format(post.createdAt, 'dd/MMM/yyyy HH:mm')}">${post.createdAt}</time>
+                        <!-- Still getting error..-->
+                        <!--<time th:text="${#temporals.format(post.createdAt, 'dd/MMM/yyyy HH:mm')}"></time>-->
                         <p th:text="${post.postContent}"></p>
                         <p></p>
-                        <a href="#" class="btn btn-warning btn-sm"><img th:src="${post.userBlogModel.pictureLocation}"  class="img-rounded" alt="My Picture" width="40" height="40"/> <span class="badge" th:text="${post.userBlogModel.name}"></span></a><br/>
-                        <!--<time th:text="${#temporals.format(post.createdAt, 'dd/MMM/yyyy HH:mm')}"></time>-->
+                        <a th:href="@{'/author_profile/' + ${post.userBlogModel.id}}" class="btn btn-warning btn-sm"><img th:src="@{|${post.userBlogModel.pictureLocation}|}"  class="img-rounded" alt="My Picture" width="40" height="40"/> <span class="badge" th:text="${post.userBlogModel.name}"></span></a><br/>
+
                     </div>
                 </div>
                     <div th:if="${pager.totalItems > 3}" class="row">
