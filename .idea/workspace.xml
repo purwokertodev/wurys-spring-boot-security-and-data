@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6f63628c-c2ee-407d-963f-8ce30e576a7b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/wury/boot/config/SecurityConfig.java" afterPath="$PROJECT_DIR$/src/main/java/com/wury/boot/config/SecurityConfig.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/wury/boot/controller/IndexController.java" afterPath="$PROJECT_DIR$/src/main/java/com/wury/boot/controller/IndexController.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/db_mig/create_uuid_custom.sql" afterPath="$PROJECT_DIR$/src/main/resources/db_script/create_uuid_custom.sql" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/db_mig/tb_comment.sql" afterPath="$PROJECT_DIR$/src/main/resources/db_script/tb_comment.sql" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/db_mig/tb_post.sql" afterPath="$PROJECT_DIR$/src/main/resources/db_script/tb_post.sql" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/db_mig/tb_user_blog.sql" afterPath="$PROJECT_DIR$/src/main/resources/db_script/tb_user_blog.sql" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/db_mig/tb_user_role.sql" afterPath="$PROJECT_DIR$/src/main/resources/db_script/tb_user_role.sql" />
     </list>
     <ignored path="wury-boot.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -172,8 +166,8 @@
       <file leaf-file-name="IndexController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/wury/boot/controller/IndexController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.06333333">
-              <caret line="162" column="24" selection-start-line="162" selection-start-column="24" selection-end-line="162" selection-end-column="24" />
+            <state vertical-scroll-proportion="0.43166667">
+              <caret line="175" column="50" selection-start-line="175" selection-start-column="50" selection-end-line="175" selection-end-column="50" />
               <folding />
             </state>
           </provider>
@@ -1560,7 +1554,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-4" y="-4" width="1374" height="748" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -2048,8 +2042,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/wury/boot/controller/IndexController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.06333333">
-          <caret line="162" column="24" selection-start-line="162" selection-start-column="24" selection-end-line="162" selection-end-column="24" />
+        <state vertical-scroll-proportion="0.43166667">
+          <caret line="175" column="50" selection-start-line="175" selection-start-column="50" selection-end-line="175" selection-end-column="50" />
           <folding />
         </state>
       </provider>

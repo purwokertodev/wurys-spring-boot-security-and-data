@@ -173,6 +173,7 @@ public class IndexController {
         ModelAndView mav = new ModelAndView("post_detail");
         PostModel postModel = postService.findOne(id).get();
         mav.addObject("post", postModel);
+        mav.addObject("commentForm", commentForm);
         return mav;
     }
 
