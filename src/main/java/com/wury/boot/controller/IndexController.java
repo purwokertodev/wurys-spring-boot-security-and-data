@@ -74,7 +74,13 @@ public class IndexController {
         LOGGER.debug("Logger inside IndexController");
         PagedListHolder<PostModel> pagedListPost = (PagedListHolder<PostModel>) request.getSession().getAttribute(SESSION_PAGED_LIST_HOLDER_POSTS);
         if(pagedListPost == null){
-            pagedListPost = new PagedListHolder<PostModel>(postService.findAll());
+            List<PostModel> listPost = postService.findAll();
+            for(PostModel pm:listPost){
+                if(pm.getDeletedAt() != null){
+                    continue;
+                }
+            }
+            pagedListPost = new PagedListHolder<PostModel>(listPost);
             pagedListPost.setPageSize(PAGE_SIZE_POST_LIST);
             pagedListPost.setSort(new MutableSortDefinition("createdAt", true, true));
         }else{
