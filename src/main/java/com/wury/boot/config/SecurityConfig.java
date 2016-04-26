@@ -39,7 +39,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         httpSecurity.authorizeRequests().antMatchers("/stylesheets/**", "/javascripts/**", "/images/**", "/resources/**").permitAll();
 
         httpSecurity.authorizeRequests()
-                .antMatchers("/", "/home/**", "/signin/**", "/registration/**", "/error/**", "/author_profile/**", "/post_detail/**").permitAll()
+                .antMatchers("/", "/home/**", "/signin/**", "/registration/**", "/error/**", "/author_profile/**", "/post_detail/**", "/create_comment").permitAll()
 				.antMatchers("/author/**").hasAuthority("AUTHOR")
                 .anyRequest().fullyAuthenticated()
                 .and()

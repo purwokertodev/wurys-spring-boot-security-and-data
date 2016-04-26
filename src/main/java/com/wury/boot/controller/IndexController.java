@@ -7,6 +7,7 @@ import com.wury.boot.repository.UserBlogRoleRepository;
 import com.wury.boot.service.api.CommentService;
 import com.wury.boot.service.api.PostService;
 import com.wury.boot.service.api.UserBlogService;
+import com.wury.boot.validator.CommentFormValidator;
 import com.wury.boot.validator.UserBlogFormValidator;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -63,6 +64,9 @@ public class IndexController {
 
     @Autowired
     private UserBlogFormValidator userBlogFormValidator;
+
+    @Autowired
+    private CommentFormValidator commentFormValidator;
 
 //    @InitBinder(value = "userBlogForm")
 //    public void initUserBlogBinder(WebDataBinder binder){
@@ -155,12 +159,39 @@ public class IndexController {
         return mav;
     }
 
+    /**
+     * view belum dibuat
+     * @param id
+     * @param commentForm
+     * @return
+     */
     @RequestMapping(value = "/post_detail/{id}", method = RequestMethod.GET)
     public ModelAndView postDetail(@PathVariable("id") UUID id, @ModelAttribute CommentForm commentForm){
+
+        LOGGER.debug("POST DETAIL = "+id);
+
         ModelAndView mav = new ModelAndView("post_detail");
         PostModel postModel = postService.findOne(id).get();
         mav.addObject("post", postModel);
         return mav;
+    }
+
+    /**
+     *
+     * @param form
+     * @param result
+     * @param redirectAttributes
+     * @return
+     */
+    @RequestMapping(value = "/create_comment", method = RequestMethod.POST)
+    public String createComment(@Valid @ModelAttribute("commentForm") CommentForm form,
+                                BindingResult result, RedirectAttributes redirectAttributes){
+        commentFormValidator.validate(form, result);
+        if(result.hasErrors()){
+            return "redirect:/";
+        }
+
+        return "redirect:/";
     }
 
     private PagerModel currentPage(PagedListHolder<?> pagedListHolder) {
