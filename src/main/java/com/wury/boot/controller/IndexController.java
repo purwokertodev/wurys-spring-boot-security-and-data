@@ -1,8 +1,10 @@
 package com.wury.boot.controller;
 
+import com.wury.boot.form.CommentForm;
 import com.wury.boot.form.UserBlogForm;
 import com.wury.boot.model.*;
 import com.wury.boot.repository.UserBlogRoleRepository;
+import com.wury.boot.service.api.CommentService;
 import com.wury.boot.service.api.PostService;
 import com.wury.boot.service.api.UserBlogService;
 import com.wury.boot.validator.UserBlogFormValidator;
@@ -49,8 +51,13 @@ public class IndexController {
 
     @Autowired
     private PostService postService;
+
     @Autowired
     private UserBlogService userBlogService;
+
+    @Autowired
+    private CommentService commentService;
+
     @Autowired
     private UserBlogRoleRepository userBlogRoleRepository;
 
@@ -145,6 +152,14 @@ public class IndexController {
         UserBlogModel userBlogModel = userBlogService.findOne(id).get();
         LOGGER.debug("AUTHOR PROFILE -> "+userBlogModel.getName());
         mav.addObject("author", userBlogModel);
+        return mav;
+    }
+
+    @RequestMapping(value = "/post_detail/{id}", method = RequestMethod.GET)
+    public ModelAndView postDetail(@PathVariable("id") UUID id, @ModelAttribute CommentForm commentForm){
+        ModelAndView mav = new ModelAndView("post_detail");
+        PostModel postModel = postService.findOne(id).get();
+        mav.addObject("post", postModel);
         return mav;
     }
 
