@@ -1,5 +1,7 @@
 package com.wury.boot.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 import java.util.Date;
 import java.util.UUID;
@@ -14,6 +16,7 @@ public class UserBlogRoleModel extends AbstractMyModel {
     @Column(name = "role_name", nullable = false, unique = true, length = 128)
     private String roleName;
 
+    @JsonIgnore
     @ManyToOne
     @JoinColumn(name = "user_blog_id")
     private UserBlogModel userBlogModel;
