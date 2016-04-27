@@ -22,13 +22,13 @@ public class IndexRestController {
     @Autowired
     private PostService postService;
 
-    @RequestMapping(value = "/all", method = RequestMethod.GET)
+    @RequestMapping(value = "/all", method = RequestMethod.GET, produces = "application/json")
     @ResponseBody
     public List<PostModel> getPosts(){
         return postService.findAll();
     }
 
-    @RequestMapping(value = "/{id}", method = RequestMethod.GET)
+    @RequestMapping(value = "/{id}", method = RequestMethod.GET, produces = "application/json")
     @ResponseBody
     public PostModel getPost(@PathVariable("id")UUID id){
         return postService.findOne(id).get();

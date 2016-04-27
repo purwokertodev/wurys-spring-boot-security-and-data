@@ -1,5 +1,7 @@
 package com.wury.boot.config;
 
+import com.fasterxml.jackson.databind.DeserializationFeature;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import org.h2.server.web.WebServlet;
 import org.springframework.boot.context.embedded.ConfigurableEmbeddedServletContainer;
 import org.springframework.boot.context.embedded.EmbeddedServletContainerCustomizer;
@@ -10,7 +12,14 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.converter.HttpMessageConverter;
+import org.springframework.http.converter.json.MappingJackson2HttpMessageConverter;
+import org.springframework.http.converter.xml.MappingJackson2XmlHttpMessageConverter;
+import org.springframework.http.converter.xml.MarshallingHttpMessageConverter;
+import org.springframework.oxm.xstream.XStreamMarshaller;
 import org.springframework.web.servlet.config.annotation.*;
+
+import java.util.List;
 
 /**
  * Created by WURI on 15/03/2016.
@@ -61,5 +70,41 @@ public class WebConfiguration extends WebMvcConfigurerAdapter {
         ServletRegistrationBean registrationBean = new ServletRegistrationBean(new WebServlet());
         registrationBean.addUrlMappings("/console/*");
         return registrationBean;
+    }
+
+    /**
+     * HTTP message converter
+     */
+    @Override
+    public void configureMessageConverters(List<HttpMessageConverter<?>> converters) {
+        super.configureMessageConverters(converters);
+        converters.add(createJsonHttpMessageConverter());
+        converters.add(createXmlHttpMessageConverter());
+    }
+
+    /**
+     * xml converter / xml support
+     * @return
+     */
+    private HttpMessageConverter<Object> createXmlHttpMessageConverter(){
+        MarshallingHttpMessageConverter messageConverter = new MarshallingHttpMessageConverter();
+        XStreamMarshaller xStreamMarshaller = new XStreamMarshaller();
+        messageConverter.setMarshaller(xStreamMarshaller);
+        messageConverter.setUnmarshaller(xStreamMarshaller);
+        return messageConverter;
+    }
+
+    /**
+     * json converter / json support
+     * @return
+     */
+
+    @Bean
+    public MappingJackson2HttpMessageConverter createJsonHttpMessageConverter(){
+        MappingJackson2HttpMessageConverter jsonConverter = new MappingJackson2HttpMessageConverter();
+        ObjectMapper objectMapper = new ObjectMapper();
+        objectMapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
+        jsonConverter.setObjectMapper(objectMapper);
+        return jsonConverter;
     }
 }
