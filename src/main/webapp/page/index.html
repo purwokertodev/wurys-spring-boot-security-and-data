@@ -21,7 +21,7 @@
                 <div th:each="post : ${posts.pageList}">
                     <div class="alert alert-success">
                         <h3>
-                            <a href="#" th:text="${post.postTitle}"></a>
+                            <a th:href="@{'/post_detail/' + ${post.id}}" th:text="${post.postTitle}"></a>
                         </h3>
                         <!-- Still getting error..-->
                         <!--<time th:text="${#temporals.format(post.createdAt, 'dd/MMM/yyyy HH:mm')}"></time>-->

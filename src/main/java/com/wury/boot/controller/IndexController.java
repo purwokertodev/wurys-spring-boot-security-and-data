@@ -156,7 +156,6 @@ public class IndexController {
     }
 
     /**
-     * view belum dibuat
      * @param id
      * @param commentForm
      * @return
@@ -169,11 +168,13 @@ public class IndexController {
         ModelAndView mav = new ModelAndView("post_detail");
         PostModel postModel = postService.findOne(id).get();
         List<CommentModel> listComment = commentService.findByPostModel(postModel);
+        int commentSize = listComment.size();
 
         Map<String, Object> map = new HashMap<String, Object>();
         map.put("post", postModel);
         map.put("commentForm", commentForm);
         map.put("comments", listComment);
+        map.put("commentSize", commentSize);
         mav.addAllObjects(map);
         return mav;
     }
