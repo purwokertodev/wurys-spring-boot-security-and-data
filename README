@@ -2,13 +2,14 @@ spring boot, spring boot security, spring data, thymeleaf, Gradle, and postgresq
 
 command :
 
-- how to run this application : gradle bootRun
-- clean : gradle clean
+- how to run this application :
+    - go to your project root
+    - type command : gradle bootRun
 
 Database (Postgresql)
 
- you can use PgAdmin, it will more easier to manage the database.
- database source available in /src/main/resources/db_mig/.
+ you can use PgAdmin, it will be easier to manage the database.
+ database source available in /src/main/resources/db_script/.
  - create database first, (blog_app_1) that is my database name on application.properties
  - execute all database source.
  - test the application
