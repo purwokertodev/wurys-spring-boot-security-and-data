@@ -41,6 +41,12 @@ public class PostServiceImpl implements PostService {
     }
 
     @Override
+    public Boolean delete(PostModel model, UserBlogModel author) {
+        LOGGER.debug("REMOVE POST = "+model.getId());
+        return postRepository.delete(model, author);
+    }
+
+    @Override
     @Transactional(readOnly = true)
     public Optional<PostModel> findOne(UUID id) {
         LOGGER.debug("FIND ONE"+id);

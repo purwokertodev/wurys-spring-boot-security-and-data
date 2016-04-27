@@ -14,7 +14,6 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.support.MutableSortDefinition;
 import org.springframework.beans.support.PagedListHolder;
-import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.util.FileCopyUtils;
@@ -30,10 +29,7 @@ import javax.validation.Valid;
 import java.io.BufferedOutputStream;
 import java.io.File;
 import java.io.FileOutputStream;
-import java.util.Arrays;
-import java.util.Date;
-import java.util.List;
-import java.util.UUID;
+import java.util.*;
 
 /**
  * Created by WURI on 16/03/2016.
@@ -172,8 +168,13 @@ public class IndexController {
 
         ModelAndView mav = new ModelAndView("post_detail");
         PostModel postModel = postService.findOne(id).get();
-        mav.addObject("post", postModel);
-        mav.addObject("commentForm", commentForm);
+        List<CommentModel> listComment = commentService.findByPostModel(postModel);
+
+        Map<String, Object> map = new HashMap<String, Object>();
+        map.put("post", postModel);
+        map.put("commentForm", commentForm);
+        map.put("comments", listComment);
+        mav.addAllObjects(map);
         return mav;
     }
 

@@ -3,6 +3,7 @@ package com.wury.boot.service.impl;
 import com.wury.boot.form.CommentForm;
 import com.wury.boot.model.CommentModel;
 import com.wury.boot.model.PostModel;
+import com.wury.boot.model.UserBlogModel;
 import com.wury.boot.repository.CommentRepository;
 import com.wury.boot.service.api.CommentService;
 import org.apache.log4j.Logger;
@@ -43,6 +44,12 @@ public class CommentServiceImpl implements CommentService{
     }
 
     @Override
+    public Boolean delete(CommentModel model, UserBlogModel postAuthor) {
+        LOGGER.debug("REMOVE COMMENT = "+model.getId());
+        return commentRepository.delete(model, postAuthor);
+    }
+
+    @Override
     @Transactional(readOnly = true)
     public Optional<CommentModel> findOne(UUID id) {
         LOGGER.debug("FIND COMMENT ONE = "+id);
@@ -52,6 +59,6 @@ public class CommentServiceImpl implements CommentService{
     @Override
     @Transactional(readOnly = true)
     public List<CommentModel> findByPostModel(PostModel postModel) {
-        return commentRepository.findByPostModelOrderByCreatedAtDesc(postModel);
+        return commentRepository.findByPostModelAndDeletedAtIsNullOrderByCreatedAtDesc(postModel);
     }
 }

@@ -11,6 +11,6 @@ import java.util.UUID;
  */
 public interface CommentRepository extends MyGenericRepository<CommentModel, UUID> {
 
-    List<CommentModel> findByPostModelOrderByCreatedAtDesc(PostModel postModel);
+    List<CommentModel> findByPostModelAndDeletedAtIsNullOrderByCreatedAtDesc(PostModel postModel);
 
 }

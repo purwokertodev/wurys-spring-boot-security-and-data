@@ -15,6 +15,7 @@ import java.util.UUID;
 public interface PostService {
 
     PostModel create(PostForm postModel, UserBlogModel author);
+    Boolean delete(PostModel model, UserBlogModel author);
     Optional<PostModel> findOne(UUID id);
     List<PostModel> findAll();
     Page<PostModel> findAll(Integer pageNumber);
