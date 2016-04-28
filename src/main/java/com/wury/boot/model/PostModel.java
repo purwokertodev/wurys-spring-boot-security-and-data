@@ -20,7 +20,7 @@ public class PostModel extends AbstractMyModel {
     @Column(name = "post_content", nullable = false)
     private String postContent;
 
-    @OneToMany(mappedBy = "postModel", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "postModel", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private List<CommentModel> comments;
 
     public UserBlogModel getUserBlogModel() {
