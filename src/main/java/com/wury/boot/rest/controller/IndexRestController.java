@@ -5,11 +5,9 @@ import com.wury.boot.model.UserBlogModel;
 import com.wury.boot.service.api.PostService;
 import com.wury.boot.service.api.UserBlogService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.UUID;
@@ -41,7 +39,25 @@ public class IndexRestController {
     @RequestMapping(value = "/author/{id}", method = RequestMethod.GET, produces = "application/json")
     @ResponseBody
     public UserBlogModel getUserBlogProfile(@PathVariable("id") UUID id){
+        this.validateAuthor(id);
         return userBlogService.findOne(id).get();
+    }
+
+    /**
+     * my custom utility method
+     *
+     */
+
+    private void validateAuthor(UUID id){
+        this.userBlogService.findOne(id).orElseThrow(()-> new UserBlogNotFoundException(id));
+    }
+
+    @ResponseStatus(HttpStatus.NOT_FOUND)
+    class UserBlogNotFoundException extends RuntimeException{
+
+        public UserBlogNotFoundException(UUID id){
+            super("Author with id = {"+id+"} not found..");
+        }
     }
 
 
