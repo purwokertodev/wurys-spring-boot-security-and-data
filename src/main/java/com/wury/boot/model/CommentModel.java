@@ -1,5 +1,7 @@
 package com.wury.boot.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 
 /**
@@ -11,6 +13,7 @@ public class CommentModel extends AbstractMyModel {
 
     @ManyToOne
     @JoinColumn(name = "post_id")
+    @JsonIgnore
     private PostModel postModel;
 
     @Column(name = "commentator_name", nullable = false)
