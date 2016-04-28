@@ -191,10 +191,12 @@ public class IndexController {
                                 BindingResult result, RedirectAttributes redirectAttributes){
         commentFormValidator.validate(form, result);
         if(result.hasErrors()){
-            return "redirect:/";
+            return "redirect:/post_detail/"+form.getPostModel();
         }
-
-        return "redirect:/";
+        //messageSuccessCreateComment
+        commentService.createComment(form);
+        redirectAttributes.addFlashAttribute("messageSuccessCreateComment", "You have successfully create a comment..");
+        return "redirect:/post_detail/"+form.getPostModel();
     }
 
     private PagerModel currentPage(PagedListHolder<?> pagedListHolder) {

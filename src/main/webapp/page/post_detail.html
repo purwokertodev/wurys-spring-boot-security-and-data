@@ -18,6 +18,10 @@
             <h3>Post Detail</h3>
         </div>
         <div class="panel-body">
+
+            <div role="alert" th:if="${messageSuccessCreateComment}"
+                 th:class="'alert alert-dismissible alert-success'" th:text="${messageSuccessCreateComment}"><span class="close" data-dismiss="alert">&times;</span></div>
+
             <div class="well">
                 <h3 th:text="${post.postTitle}">
 
@@ -45,6 +49,8 @@
                         <button type="button" class="close" data-dismiss="alert">×</button>
                         <label class="control-label" th:each="err : ${#fields.globalErrors()}" th:text="${err}">...</label>
                     </div>
+
+                    <input type="hidden" th:value="${post.id}" th:name="postModel"/>
 
                     <div class="form-group" th:classappend="${#fields.hasErrors('commentatorName')} ? 'has-error'">
                         <label class="control-label col-sm-2" for="commentatorName">Full Name:</label>

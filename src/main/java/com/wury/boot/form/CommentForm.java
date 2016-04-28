@@ -1,24 +1,25 @@
 package com.wury.boot.form;
 
-import com.wury.boot.model.PostModel;
 import org.hibernate.validator.constraints.NotEmpty;
+
+import java.util.UUID;
 
 /**
  * Created by WURI on 26/04/2016.
  */
 public class CommentForm {
 
-    private PostModel postModel;
+    private UUID postModel;
     @NotEmpty
     private String commentatorName = "";
     @NotEmpty
     private String commentContent = "";
 
-    public PostModel getPostModel() {
+    public UUID getPostModel() {
         return postModel;
     }
 
-    public void setPostModel(PostModel postModel) {
+    public void setPostModel(UUID postModel) {
         this.postModel = postModel;
     }
 

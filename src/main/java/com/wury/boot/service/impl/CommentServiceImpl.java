@@ -6,6 +6,7 @@ import com.wury.boot.model.PostModel;
 import com.wury.boot.model.UserBlogModel;
 import com.wury.boot.repository.CommentRepository;
 import com.wury.boot.service.api.CommentService;
+import com.wury.boot.service.api.PostService;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -27,12 +28,14 @@ public class CommentServiceImpl implements CommentService{
 
     @Autowired
     private CommentRepository commentRepository;
+    @Autowired
+    private PostService postService;
 
     @Override
     public CommentModel createComment(CommentForm form) {
         LOGGER.debug("SAVE COMMENT");
         CommentModel model = new CommentModel();
-        model.setPostModel(form.getPostModel());
+        model.setPostModel(postService.findOne(form.getPostModel()).get());
         model.setCommentatorName(form.getCommentatorName());
         model.setCommentContent(form.getCommentContent());
         model.setCreatedAt(new Date());
